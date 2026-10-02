@@ -1,0 +1,17 @@
+{
+  "Group": "Doolecg",
+  "Name": "Techtale",
+  "Version": "${version}",
+  "Description": "Tech, machines, power and ore processing in the style of Mekanism.",
+  "Authors": [
+    {
+      "Name": "Doolecg"
+    }
+  ],
+  "Main": "com.doolecg.techtale.TechtalePlugin",
+  "ServerVersion": "^${serverVersion}",
+  "Dependencies": {},
+  "OptionalDependencies": {},
+  "DisabledByDefault": false,
+  "IncludesAssetPack": true
+}

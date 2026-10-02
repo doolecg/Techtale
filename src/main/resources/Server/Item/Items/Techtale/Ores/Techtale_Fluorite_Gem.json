@@ -1,0 +1,39 @@
+{
+  "TranslationProperties": {
+    "Name": "techtale.items.Techtale_Fluorite_Gem.name"
+  },
+  "Categories": [
+    "Techtale.Ores"
+  ],
+  "Icon": "Icons/ItemsGenerated/Techtale_Fluorite_Gem.png",
+  "Model": "Resources/Ores/Gem.blockymodel",
+  "Texture": "Resources/Techtale/Gem_Textures/Fluorite.png",
+  "PlayerAnimationsId": "Item",
+  "IconProperties": {
+    "Scale": 0.6,
+    "Translation": [
+      0,
+      -10
+    ],
+    "Rotation": [
+      22.5,
+      45,
+      22.5
+    ]
+  },
+  "Tags": {
+    "Type": [
+      "Ingredient"
+    ],
+    "Family": [
+      "Gem"
+    ]
+  },
+  "ItemEntity": {
+    "ParticleSystemId": null
+  },
+  "Scale": 0.55,
+  "ItemSoundSetId": "ISS_Items_Gems",
+  "DropOnDeath": true,
+  "MaxStack": 25
+}

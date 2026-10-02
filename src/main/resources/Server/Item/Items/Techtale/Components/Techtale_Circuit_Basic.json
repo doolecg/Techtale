@@ -1,0 +1,35 @@
+{
+  "TranslationProperties": {
+    "Name": "techtale.items.Techtale_Circuit_Basic.name"
+  },
+  "Categories": [
+    "Techtale.Components"
+  ],
+  "Quality": "Common",
+  "Icon": "Icons/ItemsGenerated/Techtale_Circuit_Basic.png",
+  "Model": "Resources/Materials/Fabric_Scrap.blockymodel",
+  "Texture": "Resources/Techtale/Circuit_Textures/Basic.png",
+  "PlayerAnimationsId": "Item",
+  "IconProperties": {
+    "Scale": 0.6,
+    "Translation": [
+      0,
+      -6
+    ],
+    "Rotation": [
+      22.5,
+      45,
+      22.5
+    ]
+  },
+  "Tags": {
+    "Type": [
+      "Ingredient"
+    ]
+  },
+  "ItemEntity": {
+    "ParticleSystemId": null
+  },
+  "ItemSoundSetId": "ISS_Items_Ingots",
+  "DropOnDeath": true
+}

@@ -1,0 +1,20 @@
+.gradle/
+build/
+out/
+run/
+.idea/
+*.iml
+.kotlin/
+local.properties
+.codegraph/
+
+# AI tooling
+.claude/
+.operant/
+.codegraph/
+.mcp.json
+CLAUDE.md
+AGENTS.md
+GEMINI.md
+.cursor/
+.aider*

@@ -1,0 +1,38 @@
+{
+  "TranslationProperties": {
+    "Name": "techtale.items.Techtale_Crystal_Iron.name"
+  },
+  "Categories": [
+    "Techtale.Processing"
+  ],
+  "Icon": "Icons/ItemsGenerated/Techtale_Crystal_Iron.png",
+  "Model": "Resources/Crystals/Crystal_Small.blockymodel",
+  "Texture": "Resources/Techtale/Crystal_Textures/Iron.png",
+  "PlayerAnimationsId": "Item",
+  "IconProperties": {
+    "Scale": 0.8,
+    "Translation": [
+      0,
+      -8
+    ],
+    "Rotation": [
+      22.5,
+      45,
+      22.5
+    ]
+  },
+  "Tags": {
+    "Type": [
+      "Ingredient"
+    ],
+    "Family": [
+      "Crystal"
+    ]
+  },
+  "ItemEntity": {
+    "ParticleSystemId": null
+  },
+  "Scale": 0.7,
+  "ItemSoundSetId": "ISS_Items_Gems",
+  "DropOnDeath": true
+}

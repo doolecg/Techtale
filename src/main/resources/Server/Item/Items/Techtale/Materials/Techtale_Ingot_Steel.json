@@ -1,0 +1,39 @@
+{
+  "TranslationProperties": {
+    "Name": "techtale.items.Techtale_Ingot_Steel.name"
+  },
+  "Categories": [
+    "Techtale.Materials"
+  ],
+  "Icon": "Icons/ItemsGenerated/Techtale_Ingot_Steel.png",
+  "Model": "Resources/Materials/Ingot.blockymodel",
+  "Texture": "Resources/Techtale/Ingot_Textures/Steel.png",
+  "PlayerAnimationsId": "Item",
+  "IconProperties": {
+    "Scale": 1,
+    "Translation": [
+      0,
+      -3
+    ],
+    "Rotation": [
+      22.5,
+      45,
+      22.5
+    ]
+  },
+  "Tags": {
+    "Type": [
+      "Ingredient"
+    ]
+  },
+  "ItemEntity": {
+    "ParticleSystemId": null
+  },
+  "ItemSoundSetId": "ISS_Items_Ingots",
+  "DropOnDeath": true,
+  "ResourceTypes": [
+    {
+      "Id": "Metal_Bars"
+    }
+  ]
+}

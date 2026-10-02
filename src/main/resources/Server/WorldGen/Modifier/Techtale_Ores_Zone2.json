@@ -1,0 +1,530 @@
+{
+  "Target": {
+    "Root": "Default",
+    "Rules": [
+      "Zones.Zone2_*.Cave.Caves"
+    ]
+  },
+  "Operations": [
+    {
+      "Type": "Add",
+      "Content": {
+        "Type": "CaveType",
+        "Name": "Techtale_Osmium_Stone_Z2",
+        "PointGrid": {
+          "Seed": "Techtale-Osmium-Z2",
+          "Scale": 7,
+          "Jitter": 0.7,
+          "Density": {
+            "Min": 0.0,
+            "Max": 0.6
+          }
+        },
+        "HeightRange": {
+          "Min": 10,
+          "Max": 110
+        },
+        "BlockMask": {
+          "Include": {
+            "Blocks": [
+              "Rock_Stone"
+            ]
+          }
+        },
+        "Generator": {
+          "Type": "OreCluster",
+          "Blocks": [
+            {
+              "Block": "Techtale_Ore_Osmium_Stone",
+              "Weight": 3
+            },
+            {
+              "Block": "Rock_Stone",
+              "Weight": 1
+            }
+          ],
+          "Radius": {
+            "Min": 1,
+            "Max": 2
+          },
+          "Length": {
+            "Min": 3,
+            "Max": 5
+          },
+          "Repetitions": {
+            "Min": 1,
+            "Max": 3
+          }
+        }
+      }
+    },
+    {
+      "Type": "Add",
+      "Content": {
+        "Type": "CaveType",
+        "Name": "Techtale_Osmium_Basalt_Z2",
+        "PointGrid": {
+          "Seed": "Techtale-Osmium-Z2",
+          "Scale": 7,
+          "Jitter": 0.7,
+          "Density": {
+            "Min": 0.0,
+            "Max": 0.6
+          }
+        },
+        "HeightRange": {
+          "Min": 10,
+          "Max": 110
+        },
+        "BlockMask": {
+          "Include": {
+            "Blocks": [
+              "Rock_Basalt"
+            ]
+          }
+        },
+        "Generator": {
+          "Type": "OreCluster",
+          "Blocks": [
+            {
+              "Block": "Techtale_Ore_Osmium_Basalt",
+              "Weight": 3
+            },
+            {
+              "Block": "Rock_Basalt",
+              "Weight": 1
+            }
+          ],
+          "Radius": {
+            "Min": 1,
+            "Max": 2
+          },
+          "Length": {
+            "Min": 3,
+            "Max": 5
+          },
+          "Repetitions": {
+            "Min": 1,
+            "Max": 3
+          }
+        }
+      }
+    },
+    {
+      "Type": "Add",
+      "Content": {
+        "Type": "CaveType",
+        "Name": "Techtale_Tin_Stone_Z2",
+        "PointGrid": {
+          "Seed": "Techtale-Tin-Z2",
+          "Scale": 7.5,
+          "Jitter": 0.7,
+          "Density": {
+            "Min": 0.0,
+            "Max": 0.6
+          }
+        },
+        "HeightRange": {
+          "Min": 30,
+          "Max": 115
+        },
+        "BlockMask": {
+          "Include": {
+            "Blocks": [
+              "Rock_Stone"
+            ]
+          }
+        },
+        "Generator": {
+          "Type": "OreCluster",
+          "Blocks": [
+            {
+              "Block": "Techtale_Ore_Tin_Stone",
+              "Weight": 3
+            },
+            {
+              "Block": "Rock_Stone",
+              "Weight": 1
+            }
+          ],
+          "Radius": {
+            "Min": 1,
+            "Max": 2
+          },
+          "Length": {
+            "Min": 3,
+            "Max": 5
+          },
+          "Repetitions": {
+            "Min": 1,
+            "Max": 3
+          }
+        }
+      }
+    },
+    {
+      "Type": "Add",
+      "Content": {
+        "Type": "CaveType",
+        "Name": "Techtale_Tin_Basalt_Z2",
+        "PointGrid": {
+          "Seed": "Techtale-Tin-Z2",
+          "Scale": 7.5,
+          "Jitter": 0.7,
+          "Density": {
+            "Min": 0.0,
+            "Max": 0.6
+          }
+        },
+        "HeightRange": {
+          "Min": 30,
+          "Max": 115
+        },
+        "BlockMask": {
+          "Include": {
+            "Blocks": [
+              "Rock_Basalt"
+            ]
+          }
+        },
+        "Generator": {
+          "Type": "OreCluster",
+          "Blocks": [
+            {
+              "Block": "Techtale_Ore_Tin_Basalt",
+              "Weight": 3
+            },
+            {
+              "Block": "Rock_Basalt",
+              "Weight": 1
+            }
+          ],
+          "Radius": {
+            "Min": 1,
+            "Max": 2
+          },
+          "Length": {
+            "Min": 3,
+            "Max": 5
+          },
+          "Repetitions": {
+            "Min": 1,
+            "Max": 3
+          }
+        }
+      }
+    },
+    {
+      "Type": "Add",
+      "Content": {
+        "Type": "CaveType",
+        "Name": "Techtale_Lead_Stone_Z2",
+        "PointGrid": {
+          "Seed": "Techtale-Lead-Z2",
+          "Scale": 11.5,
+          "Jitter": 0.7,
+          "Density": {
+            "Min": 0.0,
+            "Max": 1.0
+          }
+        },
+        "HeightRange": {
+          "Min": 10,
+          "Max": 85
+        },
+        "BlockMask": {
+          "Include": {
+            "Blocks": [
+              "Rock_Stone"
+            ]
+          }
+        },
+        "Generator": {
+          "Type": "OreCluster",
+          "Blocks": [
+            {
+              "Block": "Techtale_Ore_Lead_Stone",
+              "Weight": 3
+            },
+            {
+              "Block": "Rock_Stone",
+              "Weight": 1
+            }
+          ],
+          "Radius": {
+            "Min": 1,
+            "Max": 2
+          },
+          "Length": {
+            "Min": 3,
+            "Max": 5
+          },
+          "Repetitions": {
+            "Min": 1,
+            "Max": 3
+          }
+        }
+      }
+    },
+    {
+      "Type": "Add",
+      "Content": {
+        "Type": "CaveType",
+        "Name": "Techtale_Lead_Basalt_Z2",
+        "PointGrid": {
+          "Seed": "Techtale-Lead-Z2",
+          "Scale": 11.5,
+          "Jitter": 0.7,
+          "Density": {
+            "Min": 0.0,
+            "Max": 0.6
+          }
+        },
+        "HeightRange": {
+          "Min": 10,
+          "Max": 85
+        },
+        "BlockMask": {
+          "Include": {
+            "Blocks": [
+              "Rock_Basalt"
+            ]
+          }
+        },
+        "Generator": {
+          "Type": "OreCluster",
+          "Blocks": [
+            {
+              "Block": "Techtale_Ore_Lead_Basalt",
+              "Weight": 3
+            },
+            {
+              "Block": "Rock_Basalt",
+              "Weight": 1
+            }
+          ],
+          "Radius": {
+            "Min": 1,
+            "Max": 2
+          },
+          "Length": {
+            "Min": 3,
+            "Max": 5
+          },
+          "Repetitions": {
+            "Min": 1,
+            "Max": 3
+          }
+        }
+      }
+    },
+    {
+      "Type": "Add",
+      "Content": {
+        "Type": "CaveType",
+        "Name": "Techtale_Fluorite_Stone_Z2",
+        "PointGrid": {
+          "Seed": "Techtale-Fluorite-Z2",
+          "Scale": 9,
+          "Jitter": 0.7,
+          "Density": {
+            "Min": 0.0,
+            "Max": 1.0
+          }
+        },
+        "HeightRange": {
+          "Min": 20,
+          "Max": 90
+        },
+        "BlockMask": {
+          "Include": {
+            "Blocks": [
+              "Rock_Stone"
+            ]
+          }
+        },
+        "Generator": {
+          "Type": "OreCluster",
+          "Blocks": [
+            {
+              "Block": "Techtale_Ore_Fluorite_Stone",
+              "Weight": 3
+            },
+            {
+              "Block": "Rock_Stone",
+              "Weight": 1
+            }
+          ],
+          "Radius": {
+            "Min": 1,
+            "Max": 1
+          },
+          "Length": {
+            "Min": 2,
+            "Max": 4
+          },
+          "Repetitions": {
+            "Min": 1,
+            "Max": 3
+          }
+        }
+      }
+    },
+    {
+      "Type": "Add",
+      "Content": {
+        "Type": "CaveType",
+        "Name": "Techtale_Fluorite_Basalt_Z2",
+        "PointGrid": {
+          "Seed": "Techtale-Fluorite-Z2",
+          "Scale": 9,
+          "Jitter": 0.7,
+          "Density": {
+            "Min": 0.0,
+            "Max": 0.6
+          }
+        },
+        "HeightRange": {
+          "Min": 20,
+          "Max": 90
+        },
+        "BlockMask": {
+          "Include": {
+            "Blocks": [
+              "Rock_Basalt"
+            ]
+          }
+        },
+        "Generator": {
+          "Type": "OreCluster",
+          "Blocks": [
+            {
+              "Block": "Techtale_Ore_Fluorite_Basalt",
+              "Weight": 3
+            },
+            {
+              "Block": "Rock_Basalt",
+              "Weight": 1
+            }
+          ],
+          "Radius": {
+            "Min": 1,
+            "Max": 1
+          },
+          "Length": {
+            "Min": 2,
+            "Max": 4
+          },
+          "Repetitions": {
+            "Min": 1,
+            "Max": 3
+          }
+        }
+      }
+    },
+    {
+      "Type": "Add",
+      "Content": {
+        "Type": "CaveType",
+        "Name": "Techtale_Uranium_Stone_Z2",
+        "PointGrid": {
+          "Seed": "Techtale-Uranium-Z2",
+          "Scale": 11,
+          "Jitter": 0.7,
+          "Density": {
+            "Min": 0.0,
+            "Max": 0.8
+          }
+        },
+        "HeightRange": {
+          "Min": 5,
+          "Max": 60
+        },
+        "BlockMask": {
+          "Include": {
+            "Blocks": [
+              "Rock_Stone"
+            ]
+          }
+        },
+        "Generator": {
+          "Type": "OreCluster",
+          "Blocks": [
+            {
+              "Block": "Techtale_Ore_Uranium_Stone",
+              "Weight": 3
+            },
+            {
+              "Block": "Rock_Stone",
+              "Weight": 1
+            }
+          ],
+          "Radius": {
+            "Min": 1,
+            "Max": 2
+          },
+          "Length": {
+            "Min": 2,
+            "Max": 4
+          },
+          "Repetitions": {
+            "Min": 1,
+            "Max": 2
+          }
+        }
+      }
+    },
+    {
+      "Type": "Add",
+      "Content": {
+        "Type": "CaveType",
+        "Name": "Techtale_Uranium_Basalt_Z2",
+        "PointGrid": {
+          "Seed": "Techtale-Uranium-Z2",
+          "Scale": 11,
+          "Jitter": 0.7,
+          "Density": {
+            "Min": 0.0,
+            "Max": 0.48
+          }
+        },
+        "HeightRange": {
+          "Min": 5,
+          "Max": 60
+        },
+        "BlockMask": {
+          "Include": {
+            "Blocks": [
+              "Rock_Basalt"
+            ]
+          }
+        },
+        "Generator": {
+          "Type": "OreCluster",
+          "Blocks": [
+            {
+              "Block": "Techtale_Ore_Uranium_Basalt",
+              "Weight": 3
+            },
+            {
+              "Block": "Rock_Basalt",
+              "Weight": 1
+            }
+          ],
+          "Radius": {
+            "Min": 1,
+            "Max": 2
+          },
+          "Length": {
+            "Min": 2,
+            "Max": 4
+          },
+          "Repetitions": {
+            "Min": 1,
+            "Max": 2
+          }
+        }
+      }
+    }
+  ]
+}

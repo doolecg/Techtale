@@ -1,0 +1,41 @@
+{
+  "Icon": "Icons/ItemCategories/Techtale.png",
+  "Order": 10,
+  "Children": [
+    {
+      "Id": "Ores",
+      "Name": "techtale.ui.itemcategory.ores",
+      "Icon": "Icons/ItemCategories/Natural-Ore.png"
+    },
+    {
+      "Id": "Materials",
+      "Name": "techtale.ui.itemcategory.materials",
+      "Icon": "Icons/ItemCategories/Metal.png"
+    },
+    {
+      "Id": "Dusts",
+      "Name": "techtale.ui.itemcategory.dusts",
+      "Icon": "Icons/ItemCategories/Items-Ingredients.png"
+    },
+    {
+      "Id": "Processing",
+      "Name": "techtale.ui.itemcategory.processing",
+      "Icon": "Icons/ItemCategories/TechnicalBlocks.png"
+    },
+    {
+      "Id": "Components",
+      "Name": "techtale.ui.itemcategory.components",
+      "Icon": "Icons/ItemCategories/Misc.png"
+    },
+    {
+      "Id": "Machines",
+      "Name": "techtale.ui.itemcategory.machines",
+      "Icon": "Icons/ItemCategories/Bench.png"
+    },
+    {
+      "Id": "Transmitters",
+      "Name": "techtale.ui.itemcategory.transmitters",
+      "Icon": "Icons/ItemCategories/Blocks.png"
+    }
+  ]
+}

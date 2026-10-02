@@ -1,0 +1,58 @@
+{
+  "TranslationProperties": {
+    "Name": "techtale.items.Techtale_Circuit_Advanced.name"
+  },
+  "Categories": [
+    "Techtale.Components"
+  ],
+  "Quality": "Uncommon",
+  "Icon": "Icons/ItemsGenerated/Techtale_Circuit_Advanced.png",
+  "Model": "Resources/Materials/Fabric_Scrap.blockymodel",
+  "Texture": "Resources/Techtale/Circuit_Textures/Advanced.png",
+  "PlayerAnimationsId": "Item",
+  "IconProperties": {
+    "Scale": 0.6,
+    "Translation": [
+      0,
+      -6
+    ],
+    "Rotation": [
+      22.5,
+      45,
+      22.5
+    ]
+  },
+  "Tags": {
+    "Type": [
+      "Ingredient"
+    ]
+  },
+  "ItemEntity": {
+    "ParticleSystemId": null
+  },
+  "ItemSoundSetId": "ISS_Items_Ingots",
+  "DropOnDeath": true,
+  "Recipe": {
+    "Input": [
+      {
+        "ItemId": "Techtale_Circuit_Basic",
+        "Quantity": 1
+      },
+      {
+        "ItemId": "Techtale_Alloy_Infused",
+        "Quantity": 2
+      }
+    ],
+    "BenchRequirement": [
+      {
+        "Type": "Crafting",
+        "Id": "Workbench",
+        "Categories": [
+          "Workbench_Crafting"
+        ]
+      }
+    ],
+    "OutputQuantity": 1,
+    "TimeSeconds": 5
+  }
+}

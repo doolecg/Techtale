@@ -1,0 +1,191 @@
+{
+  "recipes": [
+    {
+      "id": "ingot_osmium_to_dust",
+      "input": {
+        "item": "Techtale_Ingot_Osmium",
+        "count": 1
+      },
+      "output": {
+        "item": "Techtale_Dust_Osmium",
+        "count": 1
+      }
+    },
+    {
+      "id": "ingot_tin_to_dust",
+      "input": {
+        "item": "Techtale_Ingot_Tin",
+        "count": 1
+      },
+      "output": {
+        "item": "Techtale_Dust_Tin",
+        "count": 1
+      }
+    },
+    {
+      "id": "ingot_lead_to_dust",
+      "input": {
+        "item": "Techtale_Ingot_Lead",
+        "count": 1
+      },
+      "output": {
+        "item": "Techtale_Dust_Lead",
+        "count": 1
+      }
+    },
+    {
+      "id": "ingot_uranium_to_dust",
+      "input": {
+        "item": "Techtale_Ingot_Uranium",
+        "count": 1
+      },
+      "output": {
+        "item": "Techtale_Dust_Uranium",
+        "count": 1
+      }
+    },
+    {
+      "id": "ingot_steel_to_dust",
+      "input": {
+        "item": "Techtale_Ingot_Steel",
+        "count": 1
+      },
+      "output": {
+        "item": "Techtale_Dust_Steel",
+        "count": 1
+      }
+    },
+    {
+      "id": "ingot_refined_obsidian_to_dust",
+      "input": {
+        "item": "Techtale_Ingot_Refined_Obsidian",
+        "count": 1
+      },
+      "output": {
+        "item": "Techtale_Dust_Refined_Obsidian",
+        "count": 1
+      }
+    },
+    {
+      "id": "bar_iron_to_dust",
+      "input": {
+        "item": "Ingredient_Bar_Iron",
+        "count": 1
+      },
+      "output": {
+        "item": "Techtale_Dust_Iron",
+        "count": 1
+      }
+    },
+    {
+      "id": "bar_copper_to_dust",
+      "input": {
+        "item": "Ingredient_Bar_Copper",
+        "count": 1
+      },
+      "output": {
+        "item": "Techtale_Dust_Copper",
+        "count": 1
+      }
+    },
+    {
+      "id": "bar_gold_to_dust",
+      "input": {
+        "item": "Ingredient_Bar_Gold",
+        "count": 1
+      },
+      "output": {
+        "item": "Techtale_Dust_Gold",
+        "count": 1
+      }
+    },
+    {
+      "id": "bar_silver_to_dust",
+      "input": {
+        "item": "Ingredient_Bar_Silver",
+        "count": 1
+      },
+      "output": {
+        "item": "Techtale_Dust_Silver",
+        "count": 1
+      }
+    },
+    {
+      "id": "bar_cobalt_to_dust",
+      "input": {
+        "item": "Ingredient_Bar_Cobalt",
+        "count": 1
+      },
+      "output": {
+        "item": "Techtale_Dust_Cobalt",
+        "count": 1
+      }
+    },
+    {
+      "id": "bar_thorium_to_dust",
+      "input": {
+        "item": "Ingredient_Bar_Thorium",
+        "count": 1
+      },
+      "output": {
+        "item": "Techtale_Dust_Thorium",
+        "count": 1
+      }
+    },
+    {
+      "id": "bar_bronze_to_dust",
+      "input": {
+        "item": "Ingredient_Bar_Bronze",
+        "count": 1
+      },
+      "output": {
+        "item": "Techtale_Dust_Bronze",
+        "count": 1
+      }
+    },
+    {
+      "id": "diamond_to_dust",
+      "input": {
+        "item": "Rock_Gem_Diamond",
+        "count": 1
+      },
+      "output": {
+        "item": "Techtale_Dust_Diamond",
+        "count": 1
+      }
+    },
+    {
+      "id": "volcanic_rock_to_obsidian_dust",
+      "input": {
+        "item": "Rock_Volcanic",
+        "count": 1
+      },
+      "output": {
+        "item": "Techtale_Dust_Obsidian",
+        "count": 1
+      }
+    },
+    {
+      "id": "charcoal_to_dust",
+      "input": {
+        "item": "Ingredient_Charcoal",
+        "count": 1
+      },
+      "output": {
+        "item": "Techtale_Dust_Charcoal",
+        "count": 1
+      }
+    },
+    {
+      "id": "fluorite_to_dust",
+      "input": {
+        "item": "Techtale_Fluorite_Gem",
+        "count": 1
+      },
+      "output": {
+        "item": "Techtale_Dust_Fluorite",
+        "count": 1
+      }
+    }
+  ]
+}

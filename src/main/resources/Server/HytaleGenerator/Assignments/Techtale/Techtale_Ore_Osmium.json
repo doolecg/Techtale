@@ -1,0 +1,450 @@
+{
+  "Type": "Constant",
+  "ExportAs": "Techtale_Ore_Osmium",
+  "Prop": {
+    "Type": "Union",
+    "Skip": false,
+    "Props": [
+      {
+        "Type": "Density",
+        "Skip": false,
+        "Range": {
+          "X": 2,
+          "Y": 2,
+          "Z": 2
+        },
+        "Pattern": {
+          "Type": "Constant",
+          "Value": true
+        },
+        "Scanner": {
+          "Type": "Origin",
+          "Skip": false
+        },
+        "Material": {
+          "Type": "Solidity",
+          "Solid": {
+            "Type": "Constant",
+            "Material": {
+              "Solid": "Techtale_Ore_Osmium_Stone"
+            }
+          }
+        },
+        "Density": {
+          "Type": "Sum",
+          "Skip": false,
+          "Inputs": [
+            {
+              "Type": "Normalizer",
+              "Skip": false,
+              "FromMin": -1,
+              "FromMax": 1,
+              "ToMin": -0.3,
+              "ToMax": 0.3,
+              "Inputs": [
+                {
+                  "Type": "SimplexNoise3D",
+                  "Skip": false,
+                  "Lacunarity": 2,
+                  "Persistence": 0.5,
+                  "Octaves": 1,
+                  "ScaleXZ": 4,
+                  "ScaleY": 4,
+                  "Seed": "A"
+                }
+              ]
+            },
+            {
+              "Type": "Normalizer",
+              "Skip": false,
+              "FromMin": -1,
+              "FromMax": 1,
+              "ToMin": -0.7,
+              "ToMax": 0.7,
+              "Inputs": [
+                {
+                  "Type": "Anchor",
+                  "Skip": false,
+                  "Reversed": false,
+                  "Inputs": [
+                    {
+                      "Type": "Cube",
+                      "Skip": false,
+                      "Curve": {
+                        "Type": "Manual",
+                        "Points": [
+                          {
+                            "In": 0,
+                            "Out": 1
+                          },
+                          {
+                            "In": 3,
+                            "Out": -2
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "PlacementMask": {
+          "DontPlace": {
+            "Inclusive": true,
+            "Materials": [
+              {
+                "Solid": "Empty"
+              }
+            ]
+          },
+          "DontReplace": {
+            "Inclusive": false,
+            "Materials": [
+              {
+                "Solid": "Rock_Stone"
+              },
+              {
+                "Solid": "Rock_Marble"
+              },
+              {
+                "Solid": "Rock_Chalk"
+              },
+              {
+                "Solid": "Rock_Quartzite"
+              },
+              {
+                "Solid": "Rock_Sandstone"
+              },
+              {
+                "Solid": "Rock_Sandstone_White"
+              },
+              {
+                "Solid": "Rock_Sandstone_Red"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "Type": "Density",
+        "Skip": false,
+        "Range": {
+          "X": 2,
+          "Y": 2,
+          "Z": 2
+        },
+        "Pattern": {
+          "Type": "Constant",
+          "Value": true
+        },
+        "Scanner": {
+          "Type": "Origin",
+          "Skip": false
+        },
+        "Material": {
+          "Type": "Solidity",
+          "Solid": {
+            "Type": "Constant",
+            "Material": {
+              "Solid": "Techtale_Ore_Osmium_Basalt"
+            }
+          }
+        },
+        "Density": {
+          "Type": "Sum",
+          "Skip": false,
+          "Inputs": [
+            {
+              "Type": "Normalizer",
+              "Skip": false,
+              "FromMin": -1,
+              "FromMax": 1,
+              "ToMin": -0.3,
+              "ToMax": 0.3,
+              "Inputs": [
+                {
+                  "Type": "SimplexNoise3D",
+                  "Skip": false,
+                  "Lacunarity": 2,
+                  "Persistence": 0.5,
+                  "Octaves": 1,
+                  "ScaleXZ": 4,
+                  "ScaleY": 4,
+                  "Seed": "A"
+                }
+              ]
+            },
+            {
+              "Type": "Normalizer",
+              "Skip": false,
+              "FromMin": -1,
+              "FromMax": 1,
+              "ToMin": -0.7,
+              "ToMax": 0.7,
+              "Inputs": [
+                {
+                  "Type": "Anchor",
+                  "Skip": false,
+                  "Reversed": false,
+                  "Inputs": [
+                    {
+                      "Type": "Cube",
+                      "Skip": false,
+                      "Curve": {
+                        "Type": "Manual",
+                        "Points": [
+                          {
+                            "In": 0,
+                            "Out": 1
+                          },
+                          {
+                            "In": 3,
+                            "Out": -2
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "PlacementMask": {
+          "DontPlace": {
+            "Inclusive": true,
+            "Materials": [
+              {
+                "Solid": "Empty"
+              }
+            ]
+          },
+          "DontReplace": {
+            "Inclusive": false,
+            "Materials": [
+              {
+                "Solid": "Rock_Basalt"
+              },
+              {
+                "Solid": "Rock_Volcanic"
+              },
+              {
+                "Solid": "Rock_Magma_Cooled"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "Type": "Density",
+        "Skip": false,
+        "Range": {
+          "X": 2,
+          "Y": 2,
+          "Z": 2
+        },
+        "Pattern": {
+          "Type": "Constant",
+          "Value": true
+        },
+        "Scanner": {
+          "Type": "Origin",
+          "Skip": false
+        },
+        "Material": {
+          "Type": "Solidity",
+          "Solid": {
+            "Type": "Constant",
+            "Material": {
+              "Solid": "Techtale_Ore_Osmium_Shale"
+            }
+          }
+        },
+        "Density": {
+          "Type": "Sum",
+          "Skip": false,
+          "Inputs": [
+            {
+              "Type": "Normalizer",
+              "Skip": false,
+              "FromMin": -1,
+              "FromMax": 1,
+              "ToMin": -0.3,
+              "ToMax": 0.3,
+              "Inputs": [
+                {
+                  "Type": "SimplexNoise3D",
+                  "Skip": false,
+                  "Lacunarity": 2,
+                  "Persistence": 0.5,
+                  "Octaves": 1,
+                  "ScaleXZ": 4,
+                  "ScaleY": 4,
+                  "Seed": "A"
+                }
+              ]
+            },
+            {
+              "Type": "Normalizer",
+              "Skip": false,
+              "FromMin": -1,
+              "FromMax": 1,
+              "ToMin": -0.7,
+              "ToMax": 0.7,
+              "Inputs": [
+                {
+                  "Type": "Anchor",
+                  "Skip": false,
+                  "Reversed": false,
+                  "Inputs": [
+                    {
+                      "Type": "Cube",
+                      "Skip": false,
+                      "Curve": {
+                        "Type": "Manual",
+                        "Points": [
+                          {
+                            "In": 0,
+                            "Out": 1
+                          },
+                          {
+                            "In": 3,
+                            "Out": -2
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "PlacementMask": {
+          "DontPlace": {
+            "Inclusive": true,
+            "Materials": [
+              {
+                "Solid": "Empty"
+              }
+            ]
+          },
+          "DontReplace": {
+            "Inclusive": false,
+            "Materials": [
+              {
+                "Solid": "Rock_Shale"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "Type": "Density",
+        "Skip": false,
+        "Range": {
+          "X": 2,
+          "Y": 2,
+          "Z": 2
+        },
+        "Pattern": {
+          "Type": "Constant",
+          "Value": true
+        },
+        "Scanner": {
+          "Type": "Origin",
+          "Skip": false
+        },
+        "Material": {
+          "Type": "Solidity",
+          "Solid": {
+            "Type": "Constant",
+            "Material": {
+              "Solid": "Techtale_Ore_Osmium_Slate"
+            }
+          }
+        },
+        "Density": {
+          "Type": "Sum",
+          "Skip": false,
+          "Inputs": [
+            {
+              "Type": "Normalizer",
+              "Skip": false,
+              "FromMin": -1,
+              "FromMax": 1,
+              "ToMin": -0.3,
+              "ToMax": 0.3,
+              "Inputs": [
+                {
+                  "Type": "SimplexNoise3D",
+                  "Skip": false,
+                  "Lacunarity": 2,
+                  "Persistence": 0.5,
+                  "Octaves": 1,
+                  "ScaleXZ": 4,
+                  "ScaleY": 4,
+                  "Seed": "A"
+                }
+              ]
+            },
+            {
+              "Type": "Normalizer",
+              "Skip": false,
+              "FromMin": -1,
+              "FromMax": 1,
+              "ToMin": -0.7,
+              "ToMax": 0.7,
+              "Inputs": [
+                {
+                  "Type": "Anchor",
+                  "Skip": false,
+                  "Reversed": false,
+                  "Inputs": [
+                    {
+                      "Type": "Cube",
+                      "Skip": false,
+                      "Curve": {
+                        "Type": "Manual",
+                        "Points": [
+                          {
+                            "In": 0,
+                            "Out": 1
+                          },
+                          {
+                            "In": 3,
+                            "Out": -2
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "PlacementMask": {
+          "DontPlace": {
+            "Inclusive": true,
+            "Materials": [
+              {
+                "Solid": "Empty"
+              }
+            ]
+          },
+          "DontReplace": {
+            "Inclusive": false,
+            "Materials": [
+              {
+                "Solid": "Rock_Slate"
+              }
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "TranslationProperties": {
+    "Name": "techtale.items.Techtale_Dirty_Dust_Uranium.name"
+  },
+  "Categories": [
+    "Techtale.Processing"
+  ],
+  "Icon": "Icons/ItemsGenerated/Techtale_Dirty_Dust_Uranium.png",
+  "Model": "Blocks/Stone/Rubble_Small.blockymodel",
+  "Texture": "Resources/Techtale/Dirty_Dust_Textures/Uranium.png",
+  "PlayerAnimationsId": "Item",
+  "IconProperties": {
+    "Scale": 0.9,
+    "Translation": [
+      0,
+      -6
+    ],
+    "Rotation": [
+      22.5,
+      45,
+      22.5
+    ]
+  },
+  "Tags": {
+    "Type": [
+      "Ingredient"
+    ]
+  },
+  "ItemEntity": {
+    "ParticleSystemId": null
+  },
+  "Scale": 0.6,
+  "ItemSoundSetId": "ISS_Blocks_Stone",
+  "DropOnDeath": true
+}

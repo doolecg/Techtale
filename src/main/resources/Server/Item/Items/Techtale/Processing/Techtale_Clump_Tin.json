@@ -1,0 +1,35 @@
+{
+  "TranslationProperties": {
+    "Name": "techtale.items.Techtale_Clump_Tin.name"
+  },
+  "Categories": [
+    "Techtale.Processing"
+  ],
+  "Icon": "Icons/ItemsGenerated/Techtale_Clump_Tin.png",
+  "Model": "Blocks/Stone/Rubble_Medium.blockymodel",
+  "Texture": "Resources/Techtale/Clump_Textures/Tin.png",
+  "PlayerAnimationsId": "Item",
+  "IconProperties": {
+    "Scale": 0.8,
+    "Translation": [
+      0,
+      -6
+    ],
+    "Rotation": [
+      22.5,
+      45,
+      22.5
+    ]
+  },
+  "Tags": {
+    "Type": [
+      "Ingredient"
+    ]
+  },
+  "ItemEntity": {
+    "ParticleSystemId": null
+  },
+  "Scale": 0.55,
+  "ItemSoundSetId": "ISS_Blocks_Stone",
+  "DropOnDeath": true
+}

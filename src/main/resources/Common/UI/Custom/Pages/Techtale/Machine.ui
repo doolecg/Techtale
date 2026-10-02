@@ -1,0 +1,326 @@
+$C = "../../Common.ui";
+
+@GridStyle = ItemGridStyle(
+  SlotSize: 56,
+  SlotIconSize: 56,
+  SlotSpacing: 2,
+  SlotBackground: "../../Common/BlockSelectorSlotBackground.png"
+);
+
+@SectionStyle = LabelStyle(
+  FontSize: 13,
+  RenderBold: true,
+  RenderUppercase: true,
+  TextColor: #94a7bb
+);
+
+@InfoStyle = LabelStyle(
+  FontSize: 14,
+  RenderBold: true,
+  TextColor: #cfd6e0
+);
+
+$C.@PageOverlay {
+  LayoutMode: Middle;
+
+  $C.@DecoratedContainer {
+    Anchor: (Width: 600);
+
+    #Title {
+      $C.@Title #MachineTitle {
+        @Text = "";
+      }
+    }
+
+    #Content {
+      LayoutMode: Top;
+
+      Group #SlotRow {
+        Anchor: (Height: 84, Bottom: 8);
+        LayoutMode: Center;
+
+        Group #InputBox {
+          Anchor: (Width: 90);
+          LayoutMode: Top;
+
+          Label {
+            Anchor: (Height: 22);
+            Style: (...@SectionStyle, HorizontalAlignment: Center);
+            Text: "Input";
+          }
+
+          Group {
+            Anchor: (Height: 58);
+            LayoutMode: Center;
+
+            ItemGrid #InputGrid {
+              Anchor: (Width: 58, Height: 58);
+              SlotsPerRow: 1;
+              AreItemsDraggable: true;
+              Style: @GridStyle;
+            }
+          }
+        }
+
+        Group #ExtraBox {
+          Anchor: (Width: 90);
+          LayoutMode: Top;
+
+          Label #ExtraLabel {
+            Anchor: (Height: 22);
+            Style: (...@SectionStyle, HorizontalAlignment: Center);
+            Text: "Extra";
+          }
+
+          Group {
+            Anchor: (Height: 58);
+            LayoutMode: Center;
+
+            ItemGrid #ExtraGrid {
+              Anchor: (Width: 58, Height: 58);
+              SlotsPerRow: 1;
+              AreItemsDraggable: true;
+              Style: @GridStyle;
+            }
+          }
+        }
+
+        Group #FuelBox {
+          Anchor: (Width: 90);
+          LayoutMode: Top;
+
+          Label {
+            Anchor: (Height: 22);
+            Style: (...@SectionStyle, HorizontalAlignment: Center);
+            Text: "Fuel";
+          }
+
+          Group {
+            Anchor: (Height: 58);
+            LayoutMode: Center;
+
+            ItemGrid #FuelGrid {
+              Anchor: (Width: 58, Height: 58);
+              SlotsPerRow: 1;
+              AreItemsDraggable: true;
+              Style: @GridStyle;
+            }
+          }
+        }
+
+        Group #ProgressBox {
+          Anchor: (Width: 150);
+          LayoutMode: Top;
+
+          Label {
+            Anchor: (Height: 22);
+            Style: (...@SectionStyle, HorizontalAlignment: Center);
+            Text: "Progress";
+          }
+
+          Group {
+            Anchor: (Height: 58);
+            LayoutMode: Middle;
+
+            Group {
+              Anchor: (Height: 18, Horizontal: 10);
+              Background: #141c28;
+              Padding: (Full: 2);
+
+              ProgressBar #ProgressBar {
+                BarTexturePath: "BarProgress.png";
+                Value: 0.0;
+              }
+            }
+          }
+        }
+
+        Group #BurnBox {
+          Anchor: (Width: 190);
+          LayoutMode: Top;
+
+          Label #BurnText {
+            Anchor: (Height: 22);
+            Style: (...@SectionStyle, HorizontalAlignment: Center);
+            Text: "Idle";
+          }
+
+          Group {
+            Anchor: (Height: 58);
+            LayoutMode: Middle;
+
+            Group {
+              Anchor: (Height: 18, Horizontal: 10);
+              Background: #141c28;
+              Padding: (Full: 2);
+
+              ProgressBar #BurnBar {
+                BarTexturePath: "BarBurn.png";
+                Value: 0.0;
+              }
+            }
+          }
+        }
+
+        Group #SunBox {
+          Anchor: (Width: 260);
+          LayoutMode: Top;
+
+          Label {
+            Anchor: (Height: 22);
+            Style: (...@SectionStyle, HorizontalAlignment: Center);
+            Text: "Sunlight";
+          }
+
+          Group {
+            Anchor: (Height: 58);
+            LayoutMode: Middle;
+
+            Label #SunText {
+              Anchor: (Height: 24);
+              Style: (...@InfoStyle, HorizontalAlignment: Center);
+              Text: "";
+            }
+          }
+        }
+
+        Group #OutputBox {
+          Anchor: (Width: 90);
+          LayoutMode: Top;
+
+          Label {
+            Anchor: (Height: 22);
+            Style: (...@SectionStyle, HorizontalAlignment: Center);
+            Text: "Output";
+          }
+
+          Group {
+            Anchor: (Height: 58);
+            LayoutMode: Center;
+
+            ItemGrid #OutputGrid {
+              Anchor: (Width: 58, Height: 58);
+              SlotsPerRow: 1;
+              AreItemsDraggable: true;
+              Style: @GridStyle;
+            }
+          }
+        }
+
+        Group #UpgradeBox {
+          Anchor: (Width: 130, Left: 12);
+          LayoutMode: Top;
+
+          Label {
+            Anchor: (Height: 22);
+            Style: (...@SectionStyle, HorizontalAlignment: Center);
+            Text: "Upgrades";
+          }
+
+          Group {
+            Anchor: (Height: 58);
+            LayoutMode: Center;
+
+            ItemGrid #UpgradeGrid {
+              Anchor: (Width: 116, Height: 58);
+              SlotsPerRow: 2;
+              AreItemsDraggable: true;
+              Style: @GridStyle;
+            }
+          }
+        }
+      }
+
+      Group #EnergyBox {
+        Anchor: (Height: 44, Bottom: 6);
+        LayoutMode: Top;
+
+        Label #EnergyText {
+          Anchor: (Height: 22);
+          Style: (...@InfoStyle, HorizontalAlignment: Center);
+          Text: "";
+        }
+
+        Group {
+          Anchor: (Height: 16);
+          Background: #141c28;
+          Padding: (Full: 2);
+
+          ProgressBar #EnergyBar {
+            BarTexturePath: "BarEnergy.png";
+            Value: 0.0;
+          }
+        }
+      }
+
+      Group #EnergyBigBox {
+        Anchor: (Height: 76, Bottom: 6);
+        LayoutMode: Top;
+
+        Label #EnergyBigText {
+          Anchor: (Height: 34);
+          Style: (...@InfoStyle, FontSize: 20, HorizontalAlignment: Center);
+          Text: "";
+        }
+
+        Group {
+          Anchor: (Height: 34);
+          Background: #141c28;
+          Padding: (Full: 3);
+
+          ProgressBar #EnergyBigBar {
+            BarTexturePath: "BarEnergy.png";
+            Value: 0.0;
+          }
+        }
+      }
+
+      Group #SecondaryBox {
+        Anchor: (Height: 44, Bottom: 6);
+        LayoutMode: Top;
+
+        Label #SecondaryText {
+          Anchor: (Height: 22);
+          Style: (...@InfoStyle, HorizontalAlignment: Center);
+          Text: "";
+        }
+
+        Group {
+          Anchor: (Height: 16);
+          Background: #141c28;
+          Padding: (Full: 2);
+
+          ProgressBar #SecondaryBar {
+            BarTexturePath: "BarSecondary.png";
+            Value: 0.0;
+          }
+        }
+      }
+
+      Group {
+        Anchor: (Height: 1, Top: 4, Bottom: 8);
+        Background: #1b2533;
+      }
+
+      Label {
+        Anchor: (Height: 22);
+        Style: (...@SectionStyle, HorizontalAlignment: Center);
+        Text: "Inventory";
+      }
+
+      Group {
+        Anchor: (Height: 290);
+        LayoutMode: Center;
+
+        ItemGrid #PlayerGrid {
+          Anchor: (Width: 522, Height: 290);
+          SlotsPerRow: 9;
+          AreItemsDraggable: true;
+          Style: @GridStyle;
+        }
+      }
+    }
+  }
+}
+
+$C.@BackButton {}

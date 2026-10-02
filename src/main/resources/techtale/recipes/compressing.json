@@ -1,0 +1,19 @@
+{
+  "recipes": [
+    {
+      "id": "refined_obsidian_ingot",
+      "input": {
+        "item": "Techtale_Dust_Refined_Obsidian",
+        "count": 1
+      },
+      "secondary": {
+        "type": "osmium",
+        "amount": 200
+      },
+      "output": {
+        "item": "Techtale_Ingot_Refined_Obsidian",
+        "count": 1
+      }
+    }
+  ]
+}

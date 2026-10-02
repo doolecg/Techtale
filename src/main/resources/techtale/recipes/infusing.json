@@ -1,0 +1,124 @@
+{
+  "recipes": [
+    {
+      "id": "enriched_iron",
+      "input": {
+        "item": "Ingredient_Bar_Iron",
+        "count": 1
+      },
+      "secondary": {
+        "type": "carbon",
+        "amount": 10
+      },
+      "output": {
+        "item": "Techtale_Enriched_Iron",
+        "count": 1
+      }
+    },
+    {
+      "id": "steel_dust",
+      "input": {
+        "item": "Techtale_Enriched_Iron",
+        "count": 1
+      },
+      "secondary": {
+        "type": "carbon",
+        "amount": 10
+      },
+      "output": {
+        "item": "Techtale_Dust_Steel",
+        "count": 1
+      }
+    },
+    {
+      "id": "infused_alloy",
+      "input": {
+        "item": "Ingredient_Bar_Iron",
+        "count": 1
+      },
+      "secondary": {
+        "type": "copper",
+        "amount": 10
+      },
+      "output": {
+        "item": "Techtale_Alloy_Infused",
+        "count": 1
+      }
+    },
+    {
+      "id": "reinforced_alloy",
+      "input": {
+        "item": "Techtale_Alloy_Infused",
+        "count": 1
+      },
+      "secondary": {
+        "type": "diamond",
+        "amount": 20
+      },
+      "output": {
+        "item": "Techtale_Alloy_Reinforced",
+        "count": 1
+      }
+    },
+    {
+      "id": "atomic_alloy",
+      "input": {
+        "item": "Techtale_Alloy_Reinforced",
+        "count": 1
+      },
+      "secondary": {
+        "type": "refined_obsidian",
+        "amount": 40
+      },
+      "output": {
+        "item": "Techtale_Alloy_Atomic",
+        "count": 1
+      }
+    },
+    {
+      "id": "basic_circuit",
+      "input": {
+        "item": "Techtale_Ingot_Osmium",
+        "count": 1
+      },
+      "secondary": {
+        "type": "copper",
+        "amount": 20
+      },
+      "output": {
+        "item": "Techtale_Circuit_Basic",
+        "count": 1
+      }
+    },
+    {
+      "id": "bronze",
+      "input": {
+        "item": "Ingredient_Bar_Copper",
+        "count": 1
+      },
+      "secondary": {
+        "type": "tin",
+        "amount": 10
+      },
+      "output": {
+        "item": "Ingredient_Bar_Bronze",
+        "count": 1
+      }
+    },
+    {
+      "id": "refined_obsidian_dust",
+      "input": {
+        "item": "Techtale_Dust_Obsidian",
+        "count": 1
+      },
+      "secondary": {
+        "type": "diamond",
+        "amount": 10
+      },
+      "output": {
+        "item": "Techtale_Dust_Refined_Obsidian",
+        "count": 1
+      }
+    }
+  ]
+}

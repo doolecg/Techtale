@@ -1,0 +1,38 @@
+{
+  "TranslationProperties": {
+    "Name": "techtale.items.Techtale_Shard_Lead.name"
+  },
+  "Categories": [
+    "Techtale.Processing"
+  ],
+  "Icon": "Icons/ItemsGenerated/Techtale_Shard_Lead.png",
+  "Model": "Resources/Crystals/Crystal_Fragment.blockymodel",
+  "Texture": "Resources/Techtale/Shard_Textures/Lead.png",
+  "PlayerAnimationsId": "Item",
+  "IconProperties": {
+    "Scale": 0.75,
+    "Translation": [
+      -0.3,
+      0.3
+    ],
+    "Rotation": [
+      34.315,
+      29.815,
+      22.5
+    ]
+  },
+  "Tags": {
+    "Type": [
+      "Ingredient"
+    ],
+    "Family": [
+      "Shard"
+    ]
+  },
+  "ItemEntity": {
+    "ParticleSystemId": null
+  },
+  "Scale": 1.2,
+  "ItemSoundSetId": "ISS_Items_Gems",
+  "DropOnDeath": true
+}

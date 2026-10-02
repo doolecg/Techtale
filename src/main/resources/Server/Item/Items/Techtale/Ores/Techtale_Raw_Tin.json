@@ -1,0 +1,36 @@
+{
+  "TranslationProperties": {
+    "Name": "techtale.items.Techtale_Raw_Tin.name"
+  },
+  "Categories": [
+    "Techtale.Ores"
+  ],
+  "Icon": "Icons/ItemsGenerated/Techtale_Raw_Tin.png",
+  "Model": "Resources/Ores/Ore_Large.blockymodel",
+  "Texture": "Resources/Techtale/Ore_Textures/Tin.png",
+  "PlayerAnimationsId": "Block",
+  "IconProperties": {
+    "Scale": 0.57323,
+    "Translation": [
+      -3.6,
+      -16.2
+    ],
+    "Rotation": [
+      22.5,
+      45,
+      22.5
+    ]
+  },
+  "Tags": {
+    "Type": [
+      "Ore"
+    ]
+  },
+  "ItemEntity": {
+    "ParticleSystemId": null
+  },
+  "ItemSoundSetId": "ISS_Blocks_Stone",
+  "DropOnDeath": true,
+  "ItemLevel": 10,
+  "MaxStack": 25
+}

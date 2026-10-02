@@ -1,0 +1,110 @@
+{
+  "TranslationProperties": {
+    "Name": "techtale.items.Techtale_Energy_Cube_Elite.name",
+    "Description": "techtale.items.Techtale_Energy_Cube_Elite.description"
+  },
+  "ItemLevel": 10,
+  "Quality": "Rare",
+  "MaxStack": 16,
+  "Categories": [
+    "Techtale.Machines"
+  ],
+  "PlayerAnimationsId": "Block",
+  "Recipe": {
+    "Input": [
+      {
+        "ItemId": "Techtale_Energy_Cube_Advanced",
+        "Quantity": 1
+      },
+      {
+        "ItemId": "Techtale_Alloy_Reinforced",
+        "Quantity": 4
+      },
+      {
+        "ItemId": "Techtale_Circuit_Elite",
+        "Quantity": 1
+      },
+      {
+        "ItemId": "Rock_Gem_Diamond",
+        "Quantity": 2
+      }
+    ],
+    "BenchRequirement": [
+      {
+        "Type": "Crafting",
+        "Id": "Workbench",
+        "Categories": [
+          "Workbench_Crafting"
+        ]
+      }
+    ],
+    "OutputQuantity": 1,
+    "TimeSeconds": 8
+  },
+  "BlockType": {
+    "Material": "Solid",
+    "Group": "Metal",
+    "Flags": {},
+    "Gathering": {
+      "Breaking": {
+        "GatherType": "Benches"
+      }
+    },
+    "BlockParticleSetId": "Metal",
+    "ParticleColor": "#2e96dc",
+    "BlockSoundSetId": "Metal",
+    "PhysicalMaterialId": "Metal",
+    "DrawType": "Cube",
+    "HitboxType": "Full",
+    "VariantRotation": "NESW",
+    "RotationYawPlacementOffset": "OneEighty",
+    "Textures": [
+      {
+        "Weight": 1,
+        "Up": "BlockTextures/Techtale/Techtale_Energy_Cube_Elite_Face.png",
+        "Down": "BlockTextures/Techtale/Techtale_Energy_Cube_Elite_Face.png",
+        "North": "BlockTextures/Techtale/Techtale_Energy_Cube_Elite_Front.png",
+        "South": "BlockTextures/Techtale/Techtale_Energy_Cube_Elite_Face.png",
+        "East": "BlockTextures/Techtale/Techtale_Energy_Cube_Elite_Face.png",
+        "West": "BlockTextures/Techtale/Techtale_Energy_Cube_Elite_Face.png"
+      }
+    ],
+    "CubeShadingMode": "Standard",
+    "BlockEntity": {
+      "Components": {
+        "Techtale_Machine": {
+          "MachineType": "Techtale_Energy_Cube_Elite"
+        }
+      }
+    },
+    "Interactions": {
+      "Use": {
+        "Interactions": [
+          {
+            "Type": "Techtale_OpenMachine"
+          }
+        ]
+      }
+    },
+    "TextureComputedColor": "#35729B"
+  },
+  "Tags": {
+    "Type": [
+      "Metal"
+    ]
+  },
+  "IconProperties": {
+    "Scale": 0.58823,
+    "Rotation": [
+      22.5,
+      45,
+      22.5
+    ],
+    "Translation": [
+      0,
+      -13.5
+    ]
+  },
+  "Icon": "Icons/ItemsGenerated/Techtale_Energy_Cube_Elite.png",
+  "ItemSoundSetId": "ISS_Items_Metal"
+}

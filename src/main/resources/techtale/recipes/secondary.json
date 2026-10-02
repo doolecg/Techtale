@@ -1,0 +1,64 @@
+{
+  "conversions": [
+    {
+      "item": "Ingredient_Charcoal",
+      "type": "carbon",
+      "amount": 10
+    },
+    {
+      "item": "Techtale_Dust_Charcoal",
+      "type": "carbon",
+      "amount": 20
+    },
+    {
+      "item": "Techtale_Enriched_Carbon",
+      "type": "carbon",
+      "amount": 80
+    },
+    {
+      "item": "Techtale_Dust_Copper",
+      "type": "copper",
+      "amount": 10
+    },
+    {
+      "item": "Techtale_Enriched_Copper",
+      "type": "copper",
+      "amount": 80
+    },
+    {
+      "item": "Techtale_Dust_Diamond",
+      "type": "diamond",
+      "amount": 10
+    },
+    {
+      "item": "Techtale_Enriched_Diamond",
+      "type": "diamond",
+      "amount": 80
+    },
+    {
+      "item": "Techtale_Dust_Refined_Obsidian",
+      "type": "refined_obsidian",
+      "amount": 10
+    },
+    {
+      "item": "Techtale_Enriched_Refined_Obsidian",
+      "type": "refined_obsidian",
+      "amount": 80
+    },
+    {
+      "item": "Techtale_Dust_Tin",
+      "type": "tin",
+      "amount": 10
+    },
+    {
+      "item": "Techtale_Enriched_Tin",
+      "type": "tin",
+      "amount": 80
+    },
+    {
+      "item": "Techtale_Ingot_Osmium",
+      "type": "osmium",
+      "amount": 200
+    }
+  ]
+}

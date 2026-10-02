@@ -1,0 +1,90 @@
+{
+  "TranslationProperties": {
+    "Name": "techtale.items.Techtale_Steel_Casing.name",
+    "Description": "techtale.items.Techtale_Steel_Casing.description"
+  },
+  "ItemLevel": 10,
+  "Quality": "Common",
+  "MaxStack": 50,
+  "Categories": [
+    "Techtale.Components"
+  ],
+  "PlayerAnimationsId": "Block",
+  "Recipe": {
+    "Input": [
+      {
+        "ItemId": "Techtale_Ingot_Steel",
+        "Quantity": 4
+      },
+      {
+        "ItemId": "Techtale_Ingot_Osmium",
+        "Quantity": 1
+      },
+      {
+        "ResourceTypeId": "Crystal_Shards",
+        "Quantity": 4
+      }
+    ],
+    "BenchRequirement": [
+      {
+        "Type": "Crafting",
+        "Id": "Workbench",
+        "Categories": [
+          "Workbench_Crafting"
+        ]
+      }
+    ],
+    "OutputQuantity": 1,
+    "TimeSeconds": 5
+  },
+  "BlockType": {
+    "Material": "Solid",
+    "DrawType": "Cube",
+    "Group": "Metal",
+    "HitboxType": "Full",
+    "Flags": {},
+    "Gathering": {
+      "Breaking": {
+        "GatherType": "Rocks"
+      }
+    },
+    "BlockParticleSetId": "Metal",
+    "Textures": [
+      {
+        "Weight": 1,
+        "All": "BlockTextures/Techtale/Steel_Casing.png"
+      }
+    ],
+    "ParticleColor": "#5b606a",
+    "BlockSoundSetId": "Metal",
+    "PhysicalMaterialId": "Metal",
+    "TransitionToGroups": [
+      "Stone",
+      "Sand",
+      "Wood",
+      "Mud",
+      "Dirt"
+    ],
+    "CubeShadingMode": "Standard",
+    "TextureComputedColor": "#3B3F47"
+  },
+  "Tags": {
+    "Type": [
+      "Metal"
+    ]
+  },
+  "IconProperties": {
+    "Scale": 0.58823,
+    "Rotation": [
+      22.5,
+      45,
+      22.5
+    ],
+    "Translation": [
+      0,
+      -13.5
+    ]
+  },
+  "Icon": "Icons/ItemsGenerated/Techtale_Steel_Casing.png",
+  "ItemSoundSetId": "ISS_Items_Metal"
+}

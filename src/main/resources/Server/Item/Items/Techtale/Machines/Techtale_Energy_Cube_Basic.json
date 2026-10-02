@@ -1,0 +1,110 @@
+{
+  "TranslationProperties": {
+    "Name": "techtale.items.Techtale_Energy_Cube_Basic.name",
+    "Description": "techtale.items.Techtale_Energy_Cube_Basic.description"
+  },
+  "ItemLevel": 10,
+  "Quality": "Common",
+  "MaxStack": 16,
+  "Categories": [
+    "Techtale.Machines"
+  ],
+  "PlayerAnimationsId": "Block",
+  "Recipe": {
+    "Input": [
+      {
+        "ItemId": "Techtale_Steel_Casing",
+        "Quantity": 1
+      },
+      {
+        "ItemId": "Techtale_Alloy_Infused",
+        "Quantity": 4
+      },
+      {
+        "ItemId": "Techtale_Ingot_Osmium",
+        "Quantity": 2
+      },
+      {
+        "ItemId": "Techtale_Circuit_Basic",
+        "Quantity": 1
+      }
+    ],
+    "BenchRequirement": [
+      {
+        "Type": "Crafting",
+        "Id": "Workbench",
+        "Categories": [
+          "Workbench_Crafting"
+        ]
+      }
+    ],
+    "OutputQuantity": 1,
+    "TimeSeconds": 8
+  },
+  "BlockType": {
+    "Material": "Solid",
+    "Group": "Metal",
+    "Flags": {},
+    "Gathering": {
+      "Breaking": {
+        "GatherType": "Benches"
+      }
+    },
+    "BlockParticleSetId": "Metal",
+    "ParticleColor": "#969ca8",
+    "BlockSoundSetId": "Metal",
+    "PhysicalMaterialId": "Metal",
+    "DrawType": "Cube",
+    "HitboxType": "Full",
+    "VariantRotation": "NESW",
+    "RotationYawPlacementOffset": "OneEighty",
+    "Textures": [
+      {
+        "Weight": 1,
+        "Up": "BlockTextures/Techtale/Techtale_Energy_Cube_Basic_Face.png",
+        "Down": "BlockTextures/Techtale/Techtale_Energy_Cube_Basic_Face.png",
+        "North": "BlockTextures/Techtale/Techtale_Energy_Cube_Basic_Front.png",
+        "South": "BlockTextures/Techtale/Techtale_Energy_Cube_Basic_Face.png",
+        "East": "BlockTextures/Techtale/Techtale_Energy_Cube_Basic_Face.png",
+        "West": "BlockTextures/Techtale/Techtale_Energy_Cube_Basic_Face.png"
+      }
+    ],
+    "CubeShadingMode": "Standard",
+    "BlockEntity": {
+      "Components": {
+        "Techtale_Machine": {
+          "MachineType": "Techtale_Energy_Cube_Basic"
+        }
+      }
+    },
+    "Interactions": {
+      "Use": {
+        "Interactions": [
+          {
+            "Type": "Techtale_OpenMachine"
+          }
+        ]
+      }
+    },
+    "TextureComputedColor": "#71767F"
+  },
+  "Tags": {
+    "Type": [
+      "Metal"
+    ]
+  },
+  "IconProperties": {
+    "Scale": 0.58823,
+    "Rotation": [
+      22.5,
+      45,
+      22.5
+    ],
+    "Translation": [
+      0,
+      -13.5
+    ]
+  },
+  "Icon": "Icons/ItemsGenerated/Techtale_Energy_Cube_Basic.png",
+  "ItemSoundSetId": "ISS_Items_Metal"
+}

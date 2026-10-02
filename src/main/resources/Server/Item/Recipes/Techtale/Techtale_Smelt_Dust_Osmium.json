@@ -1,0 +1,25 @@
+{
+  "Input": [
+    {
+      "ItemId": "Techtale_Dust_Osmium",
+      "Quantity": 1
+    }
+  ],
+  "PrimaryOutput": {
+    "ItemId": "Techtale_Ingot_Osmium",
+    "Quantity": 1
+  },
+  "Output": [
+    {
+      "ItemId": "Techtale_Ingot_Osmium",
+      "Quantity": 1
+    }
+  ],
+  "BenchRequirement": [
+    {
+      "Type": "Processing",
+      "Id": "Furnace"
+    }
+  ],
+  "TimeSeconds": 10
+}

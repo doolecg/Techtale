@@ -1,0 +1,65 @@
+{
+  "TranslationProperties": {
+    "Name": "techtale.items.Techtale_Upgrade_Speed.name",
+    "Description": "techtale.items.Techtale_Upgrade_Speed.description"
+  },
+  "Categories": [
+    "Techtale.Components"
+  ],
+  "Quality": "Uncommon",
+  "Icon": "Icons/ItemsGenerated/Techtale_Upgrade_Speed.png",
+  "Model": "Resources/Ingredients/Essence_Concentrated.blockymodel",
+  "Texture": "Resources/Techtale/Upgrade_Textures/Speed.png",
+  "PlayerAnimationsId": "Item",
+  "IconProperties": {
+    "Scale": 0.6,
+    "Translation": [
+      0,
+      -13
+    ],
+    "Rotation": [
+      0,
+      0,
+      0
+    ]
+  },
+  "Tags": {
+    "Type": [
+      "Ingredient"
+    ]
+  },
+  "ItemEntity": {
+    "ParticleSystemId": null
+  },
+  "Scale": 0.55,
+  "ItemSoundSetId": "ISS_Items_Gems",
+  "DropOnDeath": true,
+  "MaxStack": 8,
+  "Recipe": {
+    "Input": [
+      {
+        "ItemId": "Techtale_Alloy_Infused",
+        "Quantity": 2
+      },
+      {
+        "ItemId": "Techtale_Dust_Osmium",
+        "Quantity": 1
+      },
+      {
+        "ResourceTypeId": "Crystal_Shards",
+        "Quantity": 2
+      }
+    ],
+    "BenchRequirement": [
+      {
+        "Type": "Crafting",
+        "Id": "Workbench",
+        "Categories": [
+          "Workbench_Crafting"
+        ]
+      }
+    ],
+    "OutputQuantity": 1,
+    "TimeSeconds": 5
+  }
+}

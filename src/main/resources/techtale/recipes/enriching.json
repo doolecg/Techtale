@@ -1,0 +1,169 @@
+{
+  "recipes": [
+    {
+      "id": "raw_osmium_to_dust",
+      "input": {
+        "item": "Techtale_Raw_Osmium",
+        "count": 1
+      },
+      "output": {
+        "item": "Techtale_Dust_Osmium",
+        "count": 2
+      }
+    },
+    {
+      "id": "raw_tin_to_dust",
+      "input": {
+        "item": "Techtale_Raw_Tin",
+        "count": 1
+      },
+      "output": {
+        "item": "Techtale_Dust_Tin",
+        "count": 2
+      }
+    },
+    {
+      "id": "raw_lead_to_dust",
+      "input": {
+        "item": "Techtale_Raw_Lead",
+        "count": 1
+      },
+      "output": {
+        "item": "Techtale_Dust_Lead",
+        "count": 2
+      }
+    },
+    {
+      "id": "raw_uranium_to_dust",
+      "input": {
+        "item": "Techtale_Raw_Uranium",
+        "count": 1
+      },
+      "output": {
+        "item": "Techtale_Dust_Uranium",
+        "count": 2
+      }
+    },
+    {
+      "id": "ore_iron_to_dust",
+      "input": {
+        "item": "Ore_Iron",
+        "count": 1
+      },
+      "output": {
+        "item": "Techtale_Dust_Iron",
+        "count": 2
+      }
+    },
+    {
+      "id": "ore_copper_to_dust",
+      "input": {
+        "item": "Ore_Copper",
+        "count": 1
+      },
+      "output": {
+        "item": "Techtale_Dust_Copper",
+        "count": 2
+      }
+    },
+    {
+      "id": "ore_gold_to_dust",
+      "input": {
+        "item": "Ore_Gold",
+        "count": 1
+      },
+      "output": {
+        "item": "Techtale_Dust_Gold",
+        "count": 2
+      }
+    },
+    {
+      "id": "ore_silver_to_dust",
+      "input": {
+        "item": "Ore_Silver",
+        "count": 1
+      },
+      "output": {
+        "item": "Techtale_Dust_Silver",
+        "count": 2
+      }
+    },
+    {
+      "id": "ore_cobalt_to_dust",
+      "input": {
+        "item": "Ore_Cobalt",
+        "count": 1
+      },
+      "output": {
+        "item": "Techtale_Dust_Cobalt",
+        "count": 2
+      }
+    },
+    {
+      "id": "ore_thorium_to_dust",
+      "input": {
+        "item": "Ore_Thorium",
+        "count": 1
+      },
+      "output": {
+        "item": "Techtale_Dust_Thorium",
+        "count": 2
+      }
+    },
+    {
+      "id": "charcoal_to_enriched_carbon",
+      "input": {
+        "item": "Ingredient_Charcoal",
+        "count": 2
+      },
+      "output": {
+        "item": "Techtale_Enriched_Carbon",
+        "count": 1
+      }
+    },
+    {
+      "id": "copper_dust_to_enriched_copper",
+      "input": {
+        "item": "Techtale_Dust_Copper",
+        "count": 1
+      },
+      "output": {
+        "item": "Techtale_Enriched_Copper",
+        "count": 1
+      }
+    },
+    {
+      "id": "diamond_dust_to_enriched_diamond",
+      "input": {
+        "item": "Techtale_Dust_Diamond",
+        "count": 1
+      },
+      "output": {
+        "item": "Techtale_Enriched_Diamond",
+        "count": 1
+      }
+    },
+    {
+      "id": "refined_obsidian_dust_to_enriched",
+      "input": {
+        "item": "Techtale_Dust_Refined_Obsidian",
+        "count": 1
+      },
+      "output": {
+        "item": "Techtale_Enriched_Refined_Obsidian",
+        "count": 1
+      }
+    },
+    {
+      "id": "tin_dust_to_enriched_tin",
+      "input": {
+        "item": "Techtale_Dust_Tin",
+        "count": 1
+      },
+      "output": {
+        "item": "Techtale_Enriched_Tin",
+        "count": 1
+      }
+    }
+  ]
+}

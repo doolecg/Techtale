@@ -1,0 +1,154 @@
+{
+  "recipes": [
+    {
+      "id": "dust_osmium_to_ore",
+      "input": {
+        "item": "Techtale_Dust_Osmium",
+        "count": 3
+      },
+      "extra": {
+        "item": "Rock_Stone_Cobble",
+        "count": 1
+      },
+      "output": {
+        "item": "Techtale_Ore_Osmium_Stone",
+        "count": 1
+      }
+    },
+    {
+      "id": "dust_tin_to_ore",
+      "input": {
+        "item": "Techtale_Dust_Tin",
+        "count": 3
+      },
+      "extra": {
+        "item": "Rock_Stone_Cobble",
+        "count": 1
+      },
+      "output": {
+        "item": "Techtale_Ore_Tin_Stone",
+        "count": 1
+      }
+    },
+    {
+      "id": "dust_lead_to_ore",
+      "input": {
+        "item": "Techtale_Dust_Lead",
+        "count": 3
+      },
+      "extra": {
+        "item": "Rock_Stone_Cobble",
+        "count": 1
+      },
+      "output": {
+        "item": "Techtale_Ore_Lead_Stone",
+        "count": 1
+      }
+    },
+    {
+      "id": "dust_uranium_to_ore",
+      "input": {
+        "item": "Techtale_Dust_Uranium",
+        "count": 3
+      },
+      "extra": {
+        "item": "Rock_Stone_Cobble",
+        "count": 1
+      },
+      "output": {
+        "item": "Techtale_Ore_Uranium_Stone",
+        "count": 1
+      }
+    },
+    {
+      "id": "dust_iron_to_ore",
+      "input": {
+        "item": "Techtale_Dust_Iron",
+        "count": 3
+      },
+      "extra": {
+        "item": "Rock_Stone_Cobble",
+        "count": 1
+      },
+      "output": {
+        "item": "Ore_Iron_Stone",
+        "count": 1
+      }
+    },
+    {
+      "id": "dust_copper_to_ore",
+      "input": {
+        "item": "Techtale_Dust_Copper",
+        "count": 3
+      },
+      "extra": {
+        "item": "Rock_Stone_Cobble",
+        "count": 1
+      },
+      "output": {
+        "item": "Ore_Copper_Stone",
+        "count": 1
+      }
+    },
+    {
+      "id": "dust_gold_to_ore",
+      "input": {
+        "item": "Techtale_Dust_Gold",
+        "count": 3
+      },
+      "extra": {
+        "item": "Rock_Stone_Cobble",
+        "count": 1
+      },
+      "output": {
+        "item": "Ore_Gold_Stone",
+        "count": 1
+      }
+    },
+    {
+      "id": "dust_silver_to_ore",
+      "input": {
+        "item": "Techtale_Dust_Silver",
+        "count": 3
+      },
+      "extra": {
+        "item": "Rock_Stone_Cobble",
+        "count": 1
+      },
+      "output": {
+        "item": "Ore_Silver_Stone",
+        "count": 1
+      }
+    },
+    {
+      "id": "dust_cobalt_to_ore",
+      "input": {
+        "item": "Techtale_Dust_Cobalt",
+        "count": 3
+      },
+      "extra": {
+        "item": "Rock_Stone_Cobble",
+        "count": 1
+      },
+      "output": {
+        "item": "Ore_Cobalt_Stone",
+        "count": 1
+      }
+    },
+    {
+      "id": "dust_thorium_to_ore",
+      "input": {
+        "item": "Techtale_Dust_Thorium",
+        "count": 3
+      },
+      "extra": {
+        "item": "Rock_Stone_Cobble",
+        "count": 1
+      },
+      "output": {
+        "item": "Ore_Thorium_Stone",
+        "count": 1
+      }
+    }
+  ]
+}
