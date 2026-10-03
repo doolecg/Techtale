@@ -1,9 +1,11 @@
 package com.doolecg.techtale.core.machine;
 
 import com.doolecg.techtale.core.machine.MachineDefinition.SlotRole;
+import com.doolecg.techtale.core.recipe.ChemicalRecipes;
 import com.doolecg.techtale.core.recipe.MachineRecipe;
 import com.doolecg.techtale.core.recipe.RecipeRegistry;
 import com.doolecg.techtale.core.recipe.SecondaryConversion;
+import com.doolecg.techtale.core.resource.ResourceStack;
 import java.util.function.ToIntFunction;
 import javax.annotation.Nullable;
 
@@ -13,8 +15,21 @@ public final class MachineLogic {
     }
 
     /** What the world tells a machine each tick. */
-    public record Environment(boolean canSeeSun, ToIntFunction<String> fuelTicks) {
+    public record Environment(boolean canSeeSun, ToIntFunction<String> fuelTicks, PumpSource pump, ChemicalRecipes chemicalRecipes) {
         public static final Environment NONE = new Environment(false, id -> 0);
+
+        public Environment(boolean canSeeSun, ToIntFunction<String> fuelTicks) {
+            this(canSeeSun, fuelTicks, PumpSource.NONE, new ChemicalRecipes());
+        }
+    }
+
+    /** The fluid a pump can pull from the world below it. */
+    public interface PumpSource {
+        PumpSource NONE = (maxMb, simulate) -> null;
+
+        /** @return the fluid drained (at most {@code maxMb}), or null when there is none */
+        @Nullable
+        ResourceStack drain(long maxMb, boolean simulate);
     }
 
     public static void tick(MachineDefinition def, MachineState state, MachineInventory inv, RecipeRegistry recipes, Environment env) {
@@ -33,6 +48,8 @@ public final class MachineLogic {
                 }
             }
             case ENERGY_CUBE -> state.active = state.energy.getStored() > 0;
+            case TANK -> state.active = false;
+            case PUMP, CHEMICAL_PROCESSOR -> ChemicalLogic.tick(def, state, env);
         }
     }
 

@@ -1,0 +1,130 @@
+{
+  "TranslationProperties": {
+    "Name": "techtale.items.Techtale_Electric_Pump.name",
+    "Description": "techtale.items.Techtale_Electric_Pump.description"
+  },
+  "ItemLevel": 10,
+  "Quality": "Uncommon",
+  "MaxStack": 16,
+  "Categories": [
+    "Techtale.Machines"
+  ],
+  "PlayerAnimationsId": "Block",
+  "Recipe": {
+    "Input": [
+      {
+        "ItemId": "Techtale_Steel_Casing",
+        "Quantity": 1
+      },
+      {
+        "ItemId": "Techtale_Circuit_Basic",
+        "Quantity": 1
+      },
+      {
+        "ItemId": "Ingredient_Bar_Iron",
+        "Quantity": 3
+      },
+      {
+        "ItemId": "Techtale_Ingot_Osmium",
+        "Quantity": 1
+      }
+    ],
+    "BenchRequirement": [
+      {
+        "Type": "Crafting",
+        "Id": "Workbench",
+        "Categories": [
+          "Workbench_Crafting"
+        ]
+      }
+    ],
+    "OutputQuantity": 1,
+    "TimeSeconds": 8
+  },
+  "BlockType": {
+    "Material": "Solid",
+    "Group": "Metal",
+    "Flags": {},
+    "Gathering": {
+      "Breaking": {
+        "GatherType": "Benches"
+      }
+    },
+    "BlockParticleSetId": "Metal",
+    "ParticleColor": "#454a54",
+    "BlockSoundSetId": "Metal",
+    "PhysicalMaterialId": "Metal",
+    "DrawType": "Cube",
+    "HitboxType": "Full",
+    "VariantRotation": "NESW",
+    "RotationYawPlacementOffset": "OneEighty",
+    "Textures": [
+      {
+        "Weight": 1,
+        "Up": "BlockTextures/Techtale/Techtale_Electric_Pump_Top.png",
+        "Down": "BlockTextures/Techtale/Techtale_Electric_Pump_Bottom.png",
+        "North": "BlockTextures/Techtale/Techtale_Electric_Pump_Front.png",
+        "South": "BlockTextures/Techtale/Techtale_Electric_Pump_Side.png",
+        "East": "BlockTextures/Techtale/Techtale_Electric_Pump_Side.png",
+        "West": "BlockTextures/Techtale/Techtale_Electric_Pump_Side.png"
+      }
+    ],
+    "CubeShadingMode": "Standard",
+    "BlockEntity": {
+      "Components": {
+        "Techtale_Machine": {
+          "MachineType": "Techtale_Electric_Pump"
+        }
+      }
+    },
+    "Interactions": {
+      "Use": {
+        "Interactions": [
+          {
+            "Type": "Techtale_OpenMachine"
+          }
+        ]
+      }
+    },
+    "State": {
+      "Definitions": {
+        "Active": {
+          "Textures": [
+            {
+              "Weight": 1,
+              "Up": "BlockTextures/Techtale/Techtale_Electric_Pump_Top.png",
+              "Down": "BlockTextures/Techtale/Techtale_Electric_Pump_Bottom.png",
+              "North": "BlockTextures/Techtale/Techtale_Electric_Pump_Front_Active.png",
+              "South": "BlockTextures/Techtale/Techtale_Electric_Pump_Side.png",
+              "East": "BlockTextures/Techtale/Techtale_Electric_Pump_Side.png",
+              "West": "BlockTextures/Techtale/Techtale_Electric_Pump_Side.png"
+            }
+          ],
+          "Light": {
+            "Color": "#48c"
+          }
+        }
+      }
+    },
+    "TextureComputedColor": "#454A54"
+  },
+  "Tags": {
+    "Type": [
+      "Metal"
+    ]
+  },
+  "IconProperties": {
+    "Scale": 0.58823,
+    "Rotation": [
+      22.5,
+      45,
+      22.5
+    ],
+    "Translation": [
+      0,
+      -13.5
+    ]
+  },
+  "Icon": "Icons/ItemsGenerated/Techtale_Electric_Pump.png",
+  "ItemSoundSetId": "ISS_Items_Metal"
+}

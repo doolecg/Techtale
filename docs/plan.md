@@ -56,6 +56,7 @@ All our ids start with `Techtale_` (e.g. `Techtale_Ingot_Osmium`, `Techtale_Ore_
 7. Recipes for every Phase 1 block/item on the vanilla Workbench.
 
 ### Phase 2: fluids and chemicals
+Status: first slice built and passing test, smokeTest and selfTest (typed resource networks, fluid and chemical tanks, mechanical pipe, electric pump, electrolytic separator). Not yet checked in game.
 Mechanical pipes, pressurized tubes, fluid and chemical tanks, electric pump, electrolytic separator, chemical oxidizer/infuser, rotary condensentrator, purification chamber (x3), chemical injection chamber (x4), dissolution chamber + washer + crystallizer (x5), gas-burning, bio and wind generators, pressurized reaction chamber.
 
 ### Phase 3: logistics and factories

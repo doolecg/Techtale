@@ -1,5 +1,6 @@
 package com.doolecg.techtale;
 
+import com.doolecg.techtale.core.recipe.ChemicalRecipes;
 import com.doolecg.techtale.core.recipe.RecipeLoader;
 import com.doolecg.techtale.core.recipe.RecipeRegistry;
 import com.doolecg.techtale.hytale.SmeltingRecipes;
@@ -9,6 +10,9 @@ import com.doolecg.techtale.hytale.energy.EnergyWorld;
 import com.doolecg.techtale.hytale.machine.MachineBlock;
 import com.doolecg.techtale.hytale.machine.MachineSystems;
 import com.doolecg.techtale.hytale.machine.OpenMachineInteraction;
+import com.doolecg.techtale.hytale.resource.PipeBlock;
+import com.doolecg.techtale.hytale.resource.ResourceSystems;
+import com.doolecg.techtale.hytale.resource.ResourceWorld;
 import com.hypixel.hytale.component.ComponentType;
 import com.hypixel.hytale.component.ResourceType;
 import com.hypixel.hytale.logger.HytaleLogger;
@@ -26,7 +30,10 @@ public class TechtalePlugin extends JavaPlugin {
     private ComponentType<ChunkStore, MachineBlock> machineComponentType;
     private ComponentType<ChunkStore, CableBlock> cableComponentType;
     private ResourceType<ChunkStore, EnergyWorld> energyWorldType;
+    private ComponentType<ChunkStore, PipeBlock> pipeComponentType;
+    private ResourceType<ChunkStore, ResourceWorld> resourceWorldType;
     private RecipeRegistry recipes;
+    private ChemicalRecipes chemicalRecipes;
 
     public TechtalePlugin(@Nonnull JavaPluginInit init) {
         super(init);
@@ -41,6 +48,7 @@ public class TechtalePlugin extends JavaPlugin {
         instance = this;
         try {
             recipes = RecipeLoader.loadBuiltIn(getClass().getClassLoader());
+            chemicalRecipes = ChemicalRecipes.loadBuiltIn(getClass().getClassLoader());
         } catch (IOException e) {
             throw new IllegalStateException("Could not load Techtale recipes", e);
         }
@@ -50,11 +58,15 @@ public class TechtalePlugin extends JavaPlugin {
         machineComponentType = chunkRegistry.registerComponent(MachineBlock.class, MachineBlock.ID, MachineBlock.CODEC);
         cableComponentType = chunkRegistry.registerComponent(CableBlock.class, CableBlock.ID, CableBlock.CODEC);
         energyWorldType = chunkRegistry.registerResource(EnergyWorld.class, EnergyWorld::new);
+        pipeComponentType = chunkRegistry.registerComponent(PipeBlock.class, PipeBlock.ID, PipeBlock.CODEC);
+        resourceWorldType = chunkRegistry.registerResource(ResourceWorld.class, ResourceWorld::new);
 
         chunkRegistry.registerSystem(new MachineSystems.Lifecycle(machineComponentType));
         chunkRegistry.registerSystem(new MachineSystems.Tick(machineComponentType));
         chunkRegistry.registerSystem(new EnergySystems.CableLifecycle(cableComponentType));
         chunkRegistry.registerSystem(new EnergySystems.NetworkTick());
+        chunkRegistry.registerSystem(new ResourceSystems.PipeLifecycle(pipeComponentType));
+        chunkRegistry.registerSystem(new ResourceSystems.NetworkTick());
 
         getCommandRegistry().registerCommand(new com.doolecg.techtale.hytale.command.TechtaleCommand());
         getCodecRegistry(Interaction.CODEC).register(OpenMachineInteraction.TYPE, OpenMachineInteraction.class, OpenMachineInteraction.CODEC);
@@ -76,6 +88,18 @@ public class TechtalePlugin extends JavaPlugin {
 
     public ResourceType<ChunkStore, EnergyWorld> getEnergyWorldType() {
         return energyWorldType;
+    }
+
+    public ComponentType<ChunkStore, PipeBlock> getPipeComponentType() {
+        return pipeComponentType;
+    }
+
+    public ResourceType<ChunkStore, ResourceWorld> getResourceWorldType() {
+        return resourceWorldType;
+    }
+
+    public ChemicalRecipes getChemicalRecipes() {
+        return chemicalRecipes;
     }
 
     public RecipeRegistry getRecipes() {

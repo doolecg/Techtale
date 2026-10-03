@@ -1,0 +1,281 @@
+{
+  "TranslationProperties": {
+    "Name": "techtale.items.Techtale_Mechanical_Pipe.name",
+    "Description": "techtale.items.Techtale_Mechanical_Pipe.description"
+  },
+  "ItemLevel": 10,
+  "Quality": "Common",
+  "MaxStack": 100,
+  "Categories": [
+    "Techtale.Transmitters"
+  ],
+  "PlayerAnimationsId": "Block",
+  "Recipe": {
+    "Input": [
+      {
+        "ItemId": "Ingredient_Bar_Iron",
+        "Quantity": 3
+      },
+      {
+        "ItemId": "Techtale_Ingot_Steel",
+        "Quantity": 1
+      }
+    ],
+    "BenchRequirement": [
+      {
+        "Type": "Crafting",
+        "Id": "Workbench",
+        "Categories": [
+          "Workbench_Crafting"
+        ]
+      }
+    ],
+    "OutputQuantity": 8,
+    "TimeSeconds": 3
+  },
+  "BlockType": {
+    "Material": "Solid",
+    "Group": "Metal",
+    "Flags": {},
+    "Gathering": {
+      "Breaking": {
+        "GatherType": "Benches"
+      }
+    },
+    "BlockParticleSetId": "Metal",
+    "ParticleColor": "#569678",
+    "BlockSoundSetId": "Metal",
+    "PhysicalMaterialId": "Metal",
+    "DrawType": "Model",
+    "Opacity": "Transparent",
+    "CustomModel": "Blocks/Techtale/Cable/Cable_0.blockymodel",
+    "CustomModelTexture": [
+      {
+        "Texture": "Blocks/Techtale/Pipe/Pipe_Basic_Texture.png",
+        "Weight": 1
+      }
+    ],
+    "HitboxType": "Techtale_Cable",
+    "BlockEntity": {
+      "Components": {
+        "Techtale_Pipe": {
+          "Kind": "Fluid",
+          "Tier": "Basic"
+        }
+      }
+    },
+    "State": {
+      "Definitions": {
+        "C1": {
+          "CustomModel": "Blocks/Techtale/Cable/Cable_1.blockymodel"
+        },
+        "C2": {
+          "CustomModel": "Blocks/Techtale/Cable/Cable_2.blockymodel"
+        },
+        "C3": {
+          "CustomModel": "Blocks/Techtale/Cable/Cable_3.blockymodel"
+        },
+        "C4": {
+          "CustomModel": "Blocks/Techtale/Cable/Cable_4.blockymodel"
+        },
+        "C5": {
+          "CustomModel": "Blocks/Techtale/Cable/Cable_5.blockymodel"
+        },
+        "C6": {
+          "CustomModel": "Blocks/Techtale/Cable/Cable_6.blockymodel"
+        },
+        "C7": {
+          "CustomModel": "Blocks/Techtale/Cable/Cable_7.blockymodel"
+        },
+        "C8": {
+          "CustomModel": "Blocks/Techtale/Cable/Cable_8.blockymodel"
+        },
+        "C9": {
+          "CustomModel": "Blocks/Techtale/Cable/Cable_9.blockymodel"
+        },
+        "C10": {
+          "CustomModel": "Blocks/Techtale/Cable/Cable_10.blockymodel"
+        },
+        "C11": {
+          "CustomModel": "Blocks/Techtale/Cable/Cable_11.blockymodel"
+        },
+        "C12": {
+          "CustomModel": "Blocks/Techtale/Cable/Cable_12.blockymodel"
+        },
+        "C13": {
+          "CustomModel": "Blocks/Techtale/Cable/Cable_13.blockymodel"
+        },
+        "C14": {
+          "CustomModel": "Blocks/Techtale/Cable/Cable_14.blockymodel"
+        },
+        "C15": {
+          "CustomModel": "Blocks/Techtale/Cable/Cable_15.blockymodel"
+        },
+        "C16": {
+          "CustomModel": "Blocks/Techtale/Cable/Cable_16.blockymodel"
+        },
+        "C17": {
+          "CustomModel": "Blocks/Techtale/Cable/Cable_17.blockymodel"
+        },
+        "C18": {
+          "CustomModel": "Blocks/Techtale/Cable/Cable_18.blockymodel"
+        },
+        "C19": {
+          "CustomModel": "Blocks/Techtale/Cable/Cable_19.blockymodel"
+        },
+        "C20": {
+          "CustomModel": "Blocks/Techtale/Cable/Cable_20.blockymodel"
+        },
+        "C21": {
+          "CustomModel": "Blocks/Techtale/Cable/Cable_21.blockymodel"
+        },
+        "C22": {
+          "CustomModel": "Blocks/Techtale/Cable/Cable_22.blockymodel"
+        },
+        "C23": {
+          "CustomModel": "Blocks/Techtale/Cable/Cable_23.blockymodel"
+        },
+        "C24": {
+          "CustomModel": "Blocks/Techtale/Cable/Cable_24.blockymodel"
+        },
+        "C25": {
+          "CustomModel": "Blocks/Techtale/Cable/Cable_25.blockymodel"
+        },
+        "C26": {
+          "CustomModel": "Blocks/Techtale/Cable/Cable_26.blockymodel"
+        },
+        "C27": {
+          "CustomModel": "Blocks/Techtale/Cable/Cable_27.blockymodel"
+        },
+        "C28": {
+          "CustomModel": "Blocks/Techtale/Cable/Cable_28.blockymodel"
+        },
+        "C29": {
+          "CustomModel": "Blocks/Techtale/Cable/Cable_29.blockymodel"
+        },
+        "C30": {
+          "CustomModel": "Blocks/Techtale/Cable/Cable_30.blockymodel"
+        },
+        "C31": {
+          "CustomModel": "Blocks/Techtale/Cable/Cable_31.blockymodel"
+        },
+        "C32": {
+          "CustomModel": "Blocks/Techtale/Cable/Cable_32.blockymodel"
+        },
+        "C33": {
+          "CustomModel": "Blocks/Techtale/Cable/Cable_33.blockymodel"
+        },
+        "C34": {
+          "CustomModel": "Blocks/Techtale/Cable/Cable_34.blockymodel"
+        },
+        "C35": {
+          "CustomModel": "Blocks/Techtale/Cable/Cable_35.blockymodel"
+        },
+        "C36": {
+          "CustomModel": "Blocks/Techtale/Cable/Cable_36.blockymodel"
+        },
+        "C37": {
+          "CustomModel": "Blocks/Techtale/Cable/Cable_37.blockymodel"
+        },
+        "C38": {
+          "CustomModel": "Blocks/Techtale/Cable/Cable_38.blockymodel"
+        },
+        "C39": {
+          "CustomModel": "Blocks/Techtale/Cable/Cable_39.blockymodel"
+        },
+        "C40": {
+          "CustomModel": "Blocks/Techtale/Cable/Cable_40.blockymodel"
+        },
+        "C41": {
+          "CustomModel": "Blocks/Techtale/Cable/Cable_41.blockymodel"
+        },
+        "C42": {
+          "CustomModel": "Blocks/Techtale/Cable/Cable_42.blockymodel"
+        },
+        "C43": {
+          "CustomModel": "Blocks/Techtale/Cable/Cable_43.blockymodel"
+        },
+        "C44": {
+          "CustomModel": "Blocks/Techtale/Cable/Cable_44.blockymodel"
+        },
+        "C45": {
+          "CustomModel": "Blocks/Techtale/Cable/Cable_45.blockymodel"
+        },
+        "C46": {
+          "CustomModel": "Blocks/Techtale/Cable/Cable_46.blockymodel"
+        },
+        "C47": {
+          "CustomModel": "Blocks/Techtale/Cable/Cable_47.blockymodel"
+        },
+        "C48": {
+          "CustomModel": "Blocks/Techtale/Cable/Cable_48.blockymodel"
+        },
+        "C49": {
+          "CustomModel": "Blocks/Techtale/Cable/Cable_49.blockymodel"
+        },
+        "C50": {
+          "CustomModel": "Blocks/Techtale/Cable/Cable_50.blockymodel"
+        },
+        "C51": {
+          "CustomModel": "Blocks/Techtale/Cable/Cable_51.blockymodel"
+        },
+        "C52": {
+          "CustomModel": "Blocks/Techtale/Cable/Cable_52.blockymodel"
+        },
+        "C53": {
+          "CustomModel": "Blocks/Techtale/Cable/Cable_53.blockymodel"
+        },
+        "C54": {
+          "CustomModel": "Blocks/Techtale/Cable/Cable_54.blockymodel"
+        },
+        "C55": {
+          "CustomModel": "Blocks/Techtale/Cable/Cable_55.blockymodel"
+        },
+        "C56": {
+          "CustomModel": "Blocks/Techtale/Cable/Cable_56.blockymodel"
+        },
+        "C57": {
+          "CustomModel": "Blocks/Techtale/Cable/Cable_57.blockymodel"
+        },
+        "C58": {
+          "CustomModel": "Blocks/Techtale/Cable/Cable_58.blockymodel"
+        },
+        "C59": {
+          "CustomModel": "Blocks/Techtale/Cable/Cable_59.blockymodel"
+        },
+        "C60": {
+          "CustomModel": "Blocks/Techtale/Cable/Cable_60.blockymodel"
+        },
+        "C61": {
+          "CustomModel": "Blocks/Techtale/Cable/Cable_61.blockymodel"
+        },
+        "C62": {
+          "CustomModel": "Blocks/Techtale/Cable/Cable_62.blockymodel"
+        },
+        "C63": {
+          "CustomModel": "Blocks/Techtale/Cable/Cable_63.blockymodel"
+        }
+      }
+    },
+    "TextureComputedColor": "#487B63"
+  },
+  "Tags": {
+    "Type": [
+      "Metal"
+    ]
+  },
+  "IconProperties": {
+    "Scale": 0.58823,
+    "Rotation": [
+      22.5,
+      45,
+      22.5
+    ],
+    "Translation": [
+      0,
+      -13.5
+    ]
+  },
+  "Icon": "Icons/ItemsGenerated/Techtale_Mechanical_Pipe.png",
+  "ItemSoundSetId": "ISS_Items_Metal"
+}

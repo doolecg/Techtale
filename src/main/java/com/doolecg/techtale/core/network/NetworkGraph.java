@@ -26,6 +26,8 @@ public final class NetworkGraph<N extends Network> {
     private final Set<N> networks = new LinkedHashSet<>();
     /** Amount brought in by members added since the last rebuild (e.g. loaded from disk). */
     private final Long2LongOpenHashMap pendingShares = new Long2LongOpenHashMap();
+    /** Content type of each pending share (absent when untyped). */
+    private final Long2ObjectOpenHashMap<String> pendingTypes = new Long2ObjectOpenHashMap<>();
     /** Positions whose neighbourhood changed since the last rebuild. */
     private final LongOpenHashSet dirty = new LongOpenHashSet();
 
@@ -35,9 +37,17 @@ public final class NetworkGraph<N extends Network> {
 
     /** Adds a member carrying {@code storedShare} into whatever network it ends up in. */
     public void add(long pos, long capacity, long storedShare) {
+        add(pos, capacity, storedShare, null);
+    }
+
+    /** As {@link #add(long, long, long)}, with the content type of the carried share (null if untyped). */
+    public void add(long pos, long capacity, long storedShare, String type) {
         capacities.put(pos, Math.max(0, capacity));
         if (storedShare > 0) {
             pendingShares.addTo(pos, storedShare);
+            if (type != null) {
+                pendingTypes.put(pos, type);
+            }
         }
         dirty.add(pos);
     }
@@ -55,6 +65,7 @@ public final class NetworkGraph<N extends Network> {
             dissolve(network);
         }
         long share = pendingShares.remove(pos);
+        pendingTypes.remove(pos);
         capacities.remove(pos);
         networkOf.remove(pos);
         dirty.remove(pos);
@@ -106,18 +117,31 @@ public final class NetworkGraph<N extends Network> {
                 continue;
             }
             N network = factory.get();
-            long stored = 0;
+            long[] existingStored = new long[1];
+            String[] existingType = new String[1];
+            java.util.List<Object[]> shares = new java.util.ArrayList<>();
             LongArrayFIFOQueue queue = new LongArrayFIFOQueue();
             queue.enqueue(seed);
             visited.add(seed);
             while (!queue.isEmpty()) {
                 long pos = queue.dequeueLong();
                 network.addMember(pos, capacities.get(pos));
-                stored += pendingShares.remove(pos);
+                long share = pendingShares.remove(pos);
+                String shareType = pendingTypes.remove(pos);
+                if (share > 0) {
+                    shares.add(new Object[] {share, shareType});
+                }
                 N existing = networkOf.get(pos);
                 if (existing != null && existing != network) {
                     // A neighbouring network we have not dissolved yet (not touched by a dirty position).
-                    stored += existing.getStored();
+                    String t = existing.getType();
+                    // Older networks outrank new shares; of two older ones of different types the first wins.
+                    if (t == null || existingType[0] == null || t.equals(existingType[0])) {
+                        existingStored[0] += existing.getStored();
+                        if (existingType[0] == null) {
+                            existingType[0] = t;
+                        }
+                    }
                     for (long member : existing.getMembers().toLongArray()) {
                         networkOf.remove(member);
                         if (visited.add(member)) {
@@ -134,7 +158,19 @@ public final class NetworkGraph<N extends Network> {
                     }
                 }
             }
+            String type = existingType[0];
+            long stored = existingStored[0];
+            for (Object[] share : shares) {
+                String shareType = (String) share[1];
+                if (shareType == null || type == null || type.equals(shareType)) {
+                    stored += (Long) share[0];
+                    if (type == null) {
+                        type = shareType;
+                    }
+                }
+            }
             network.setStored(stored);
+            network.setType(type);
             networks.add(network);
         }
     }
@@ -144,12 +180,16 @@ public final class NetworkGraph<N extends Network> {
         if (!networks.remove(network)) {
             return;
         }
+        String type = network.getType();
         long remaining = network.getStored();
         long[] members = network.getMembers().toLongArray();
         for (long member : members) {
             long part = Math.min(remaining, network.shareOf(member));
             if (part > 0) {
                 pendingShares.addTo(member, part);
+                if (type != null) {
+                    pendingTypes.put(member, type);
+                }
                 remaining -= part;
             }
             networkOf.remove(member);
@@ -157,6 +197,9 @@ public final class NetworkGraph<N extends Network> {
         }
         if (remaining > 0 && members.length > 0) {
             pendingShares.addTo(members[0], remaining);
+            if (type != null) {
+                pendingTypes.put(members[0], type);
+            }
         }
     }
 }

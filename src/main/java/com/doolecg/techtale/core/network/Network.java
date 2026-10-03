@@ -14,6 +14,7 @@ public abstract class Network {
     protected final Long2LongOpenHashMap members = new Long2LongOpenHashMap();
     protected long capacity;
     protected long stored;
+    private String type;
 
     public long getId() {
         return id;
@@ -46,6 +47,21 @@ public abstract class Network {
 
     void setStored(long stored) {
         this.stored = Math.max(0, Math.min(stored, capacity));
+        if (this.stored == 0) {
+            type = null;
+        }
+    }
+
+    /** What the buffer holds (e.g. a fluid or gas id), or null when untyped or empty. */
+    public String getType() {
+        if (stored == 0) {
+            type = null;
+        }
+        return type;
+    }
+
+    void setType(String type) {
+        this.type = type;
     }
 
     public long getNeeded() {

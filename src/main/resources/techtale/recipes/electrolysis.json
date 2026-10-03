@@ -1,0 +1,21 @@
+{
+  "recipes": [
+    {
+      "id": "electrolysis_water",
+      "input": {
+        "fluid": "water",
+        "amount": 2
+      },
+      "outputs": [
+        {
+          "chemical": "hydrogen",
+          "amount": 2
+        },
+        {
+          "chemical": "oxygen",
+          "amount": 1
+        }
+      ]
+    }
+  ]
+}

@@ -297,6 +297,105 @@ $C.@PageOverlay {
         }
       }
 
+      Group #Tank0Box {
+        Anchor: (Height: 44, Bottom: 6);
+        LayoutMode: Top;
+
+        Label #Tank0Text {
+          Anchor: (Height: 22);
+          Style: (...@InfoStyle, HorizontalAlignment: Center);
+          Text: "";
+        }
+
+        Group #Tank0FluidFrame {
+          Anchor: (Height: 16);
+          Background: #141c28;
+          Padding: (Full: 2);
+
+          ProgressBar #Tank0FluidBar {
+            BarTexturePath: "BarFluid.png";
+            Value: 0.0;
+          }
+        }
+
+        Group #Tank0ChemicalFrame {
+          Anchor: (Height: 16);
+          Background: #141c28;
+          Padding: (Full: 2);
+
+          ProgressBar #Tank0ChemicalBar {
+            BarTexturePath: "BarChemical.png";
+            Value: 0.0;
+          }
+        }
+      }
+
+      Group #Tank1Box {
+        Anchor: (Height: 44, Bottom: 6);
+        LayoutMode: Top;
+
+        Label #Tank1Text {
+          Anchor: (Height: 22);
+          Style: (...@InfoStyle, HorizontalAlignment: Center);
+          Text: "";
+        }
+
+        Group #Tank1FluidFrame {
+          Anchor: (Height: 16);
+          Background: #141c28;
+          Padding: (Full: 2);
+
+          ProgressBar #Tank1FluidBar {
+            BarTexturePath: "BarFluid.png";
+            Value: 0.0;
+          }
+        }
+
+        Group #Tank1ChemicalFrame {
+          Anchor: (Height: 16);
+          Background: #141c28;
+          Padding: (Full: 2);
+
+          ProgressBar #Tank1ChemicalBar {
+            BarTexturePath: "BarChemical.png";
+            Value: 0.0;
+          }
+        }
+      }
+
+      Group #Tank2Box {
+        Anchor: (Height: 44, Bottom: 6);
+        LayoutMode: Top;
+
+        Label #Tank2Text {
+          Anchor: (Height: 22);
+          Style: (...@InfoStyle, HorizontalAlignment: Center);
+          Text: "";
+        }
+
+        Group #Tank2FluidFrame {
+          Anchor: (Height: 16);
+          Background: #141c28;
+          Padding: (Full: 2);
+
+          ProgressBar #Tank2FluidBar {
+            BarTexturePath: "BarFluid.png";
+            Value: 0.0;
+          }
+        }
+
+        Group #Tank2ChemicalFrame {
+          Anchor: (Height: 16);
+          Background: #141c28;
+          Padding: (Full: 2);
+
+          ProgressBar #Tank2ChemicalBar {
+            BarTexturePath: "BarChemical.png";
+            Value: 0.0;
+          }
+        }
+      }
+
       Group {
         Anchor: (Height: 1, Top: 4, Bottom: 8);
         Background: #1b2533;

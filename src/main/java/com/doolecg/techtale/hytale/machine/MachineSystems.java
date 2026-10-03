@@ -11,6 +11,9 @@ import com.doolecg.techtale.core.machine.MachineState;
 import com.doolecg.techtale.hytale.BlockAccess;
 import com.doolecg.techtale.hytale.energy.EnergySystems;
 import com.doolecg.techtale.hytale.energy.EnergyWorld;
+import com.doolecg.techtale.hytale.resource.ResourceSystems;
+import com.doolecg.techtale.hytale.resource.ResourceWorld;
+import com.doolecg.techtale.hytale.resource.WorldFluids;
 import com.hypixel.hytale.component.AddReason;
 import com.hypixel.hytale.component.ArchetypeChunk;
 import com.hypixel.hytale.component.CommandBuffer;
@@ -80,6 +83,7 @@ public final class MachineSystems {
             EnergyWorld ew = EnergyWorld.of(store);
             ew.machines.put(pos, ref);
             EnergySystems.markAround(ew, pos);
+            ResourceSystems.markAround(ResourceWorld.of(store), pos);
             machine.getItems().registerChangeEvent(e -> info.markNeedsSaving());
         }
 
@@ -95,6 +99,7 @@ public final class MachineSystems {
             if (pos != Long.MIN_VALUE) {
                 ew.machines.remove(pos);
                 EnergySystems.markAround(ew, pos);
+                ResourceSystems.markAround(ResourceWorld.of(store), pos);
             }
             for (MachinePage page : machine.getOpenPages()) {
                 page.closeFromMachine();
@@ -159,15 +164,23 @@ public final class MachineSystems {
             MachineState state = machine.getState();
             World world = store.getExternalData().getWorld();
             EnergyWorld ew = EnergyWorld.of(store);
+            ResourceWorld rw = ResourceWorld.of(store);
             MachineLogic.Environment env = new MachineLogic.Environment(
                 def.kind() == MachineDefinition.Kind.SOLAR_GENERATOR && canSeeSun(world, store, info, pos),
-                MachineSystems::fuelTicks);
+                MachineSystems::fuelTicks,
+                def.kind() == MachineDefinition.Kind.PUMP
+                    ? new WorldFluids(store, BlockPos.x(pos), BlockPos.y(pos), BlockPos.z(pos))
+                    : MachineLogic.PumpSource.NONE,
+                TechtalePlugin.get().getChemicalRecipes());
             ContainerInventory inv = new ContainerInventory(machine.getItems());
             boolean wasActive = state.active;
             for (int i = 0; i < steps; i++) {
                 MachineLogic.tick(def, state, inv, TechtalePlugin.get().getRecipes(), env);
                 if (def.outputRate() > 0) {
                     pushEnergy(machine, state, ew, store, pos);
+                }
+                if (!def.tanks().isEmpty()) {
+                    ResourceSystems.pushOutputs(machine, pos, rw, p -> ew.machineAt(store, p));
                 }
             }
             info.markNeedsSaving();

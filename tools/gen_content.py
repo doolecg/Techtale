@@ -745,6 +745,7 @@ class Gen:
         self.gen_casing()
         import gen_blocks
         gen_blocks.generate(self, sys.modules[__name__])
+        __import__("gen_fluids").generate(self, sys.modules[__name__])
         self.gen_category()
         self.gen_lang()
         print(f"Generated {len(self.ids)} items/blocks, {len(self.lang)} lang keys.")

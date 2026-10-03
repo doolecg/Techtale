@@ -1,0 +1,130 @@
+{
+  "TranslationProperties": {
+    "Name": "techtale.items.Techtale_Electrolytic_Separator.name",
+    "Description": "techtale.items.Techtale_Electrolytic_Separator.description"
+  },
+  "ItemLevel": 10,
+  "Quality": "Uncommon",
+  "MaxStack": 16,
+  "Categories": [
+    "Techtale.Machines"
+  ],
+  "PlayerAnimationsId": "Block",
+  "Recipe": {
+    "Input": [
+      {
+        "ItemId": "Techtale_Steel_Casing",
+        "Quantity": 1
+      },
+      {
+        "ItemId": "Techtale_Circuit_Basic",
+        "Quantity": 2
+      },
+      {
+        "ItemId": "Ingredient_Bar_Iron",
+        "Quantity": 2
+      },
+      {
+        "ItemId": "Techtale_Ingot_Osmium",
+        "Quantity": 2
+      }
+    ],
+    "BenchRequirement": [
+      {
+        "Type": "Crafting",
+        "Id": "Workbench",
+        "Categories": [
+          "Workbench_Crafting"
+        ]
+      }
+    ],
+    "OutputQuantity": 1,
+    "TimeSeconds": 8
+  },
+  "BlockType": {
+    "Material": "Solid",
+    "Group": "Metal",
+    "Flags": {},
+    "Gathering": {
+      "Breaking": {
+        "GatherType": "Benches"
+      }
+    },
+    "BlockParticleSetId": "Metal",
+    "ParticleColor": "#454a54",
+    "BlockSoundSetId": "Metal",
+    "PhysicalMaterialId": "Metal",
+    "DrawType": "Cube",
+    "HitboxType": "Full",
+    "VariantRotation": "NESW",
+    "RotationYawPlacementOffset": "OneEighty",
+    "Textures": [
+      {
+        "Weight": 1,
+        "Up": "BlockTextures/Techtale/Techtale_Electrolytic_Separator_Top.png",
+        "Down": "BlockTextures/Techtale/Techtale_Electrolytic_Separator_Bottom.png",
+        "North": "BlockTextures/Techtale/Techtale_Electrolytic_Separator_Front.png",
+        "South": "BlockTextures/Techtale/Techtale_Electrolytic_Separator_Side.png",
+        "East": "BlockTextures/Techtale/Techtale_Electrolytic_Separator_Hydrogen.png",
+        "West": "BlockTextures/Techtale/Techtale_Electrolytic_Separator_Oxygen.png"
+      }
+    ],
+    "CubeShadingMode": "Standard",
+    "BlockEntity": {
+      "Components": {
+        "Techtale_Machine": {
+          "MachineType": "Techtale_Electrolytic_Separator"
+        }
+      }
+    },
+    "Interactions": {
+      "Use": {
+        "Interactions": [
+          {
+            "Type": "Techtale_OpenMachine"
+          }
+        ]
+      }
+    },
+    "State": {
+      "Definitions": {
+        "Active": {
+          "Textures": [
+            {
+              "Weight": 1,
+              "Up": "BlockTextures/Techtale/Techtale_Electrolytic_Separator_Top.png",
+              "Down": "BlockTextures/Techtale/Techtale_Electrolytic_Separator_Bottom.png",
+              "North": "BlockTextures/Techtale/Techtale_Electrolytic_Separator_Front_Active.png",
+              "South": "BlockTextures/Techtale/Techtale_Electrolytic_Separator_Side.png",
+              "East": "BlockTextures/Techtale/Techtale_Electrolytic_Separator_Hydrogen.png",
+              "West": "BlockTextures/Techtale/Techtale_Electrolytic_Separator_Oxygen.png"
+            }
+          ],
+          "Light": {
+            "Color": "#6be"
+          }
+        }
+      }
+    },
+    "TextureComputedColor": "#454A54"
+  },
+  "Tags": {
+    "Type": [
+      "Metal"
+    ]
+  },
+  "IconProperties": {
+    "Scale": 0.58823,
+    "Rotation": [
+      22.5,
+      45,
+      22.5
+    ],
+    "Translation": [
+      0,
+      -13.5
+    ]
+  },
+  "Icon": "Icons/ItemsGenerated/Techtale_Electrolytic_Separator.png",
+  "ItemSoundSetId": "ISS_Items_Metal"
+}

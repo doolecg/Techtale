@@ -1,5 +1,6 @@
 package com.doolecg.techtale.hytale.command;
 
+import com.doolecg.techtale.hytale.debug.ChemicalSelfTest;
 import com.doolecg.techtale.hytale.debug.SelfTest;
 import com.hypixel.hytale.component.Ref;
 import com.hypixel.hytale.logger.HytaleLogger;
@@ -54,6 +55,15 @@ public class SelfTestCommand extends AbstractAsyncCommand {
         return SelfTest.run(world, x, y, z, line -> {
             LOGGER.atInfo().log("%s", line);
             context.sendMessage(Message.raw(line));
+        }).thenCompose(passed -> {
+            if (!passed) {
+                return CompletableFuture.completedFuture(false);
+            }
+            // The chemical rig sits 6 blocks south of the base rig and 2 east, clear of its footprint.
+            return ChemicalSelfTest.run(world, x + 2, y, z + 6, line -> {
+                LOGGER.atInfo().log("%s", line);
+                context.sendMessage(Message.raw(line));
+            });
         }).thenAccept(passed -> {
         });
     }

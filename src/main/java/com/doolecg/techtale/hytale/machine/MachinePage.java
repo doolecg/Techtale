@@ -5,6 +5,8 @@ import com.doolecg.techtale.core.machine.MachineDefinition;
 import com.doolecg.techtale.core.machine.MachineDefinition.SlotRole;
 import com.doolecg.techtale.core.machine.MachineState;
 import com.doolecg.techtale.core.machine.Machines;
+import com.doolecg.techtale.core.resource.ResourceBuffer;
+import com.doolecg.techtale.core.resource.ResourceKind;
 import com.doolecg.techtale.hytale.ui.MachineSlotRules;
 import com.doolecg.techtale.hytale.ui.UiFormat;
 import com.hypixel.hytale.codec.Codec;
@@ -38,6 +40,7 @@ import javax.annotation.Nullable;
 public class MachinePage extends InteractiveCustomUIPage<MachinePage.PageEvent> {
     public static final String UI = "Pages/Techtale/Machine.ui";
     private static final long REFRESH_MS = 250;
+    private static final int MAX_TANKS = 3;
     /** A drop only counts when its drag-completed event follows this soon. */
     private static final long DROP_WINDOW_MS = 2000;
 
@@ -111,7 +114,7 @@ public class MachinePage extends InteractiveCustomUIPage<MachinePage.PageEvent> 
 
         boolean cube = def.kind() == MachineDefinition.Kind.ENERGY_CUBE;
         boolean processor = def.kind() == MachineDefinition.Kind.PROCESSOR;
-        cmd.set("#SlotRow.Visible", !cube);
+        cmd.set("#SlotRow.Visible", !def.slots().isEmpty());
         cmd.set("#InputBox.Visible", has(def, SlotRole.INPUT));
         cmd.set("#ExtraBox.Visible", has(def, SlotRole.EXTRA));
         cmd.set("#OutputBox.Visible", has(def, SlotRole.OUTPUT));
@@ -120,10 +123,17 @@ public class MachinePage extends InteractiveCustomUIPage<MachinePage.PageEvent> 
         cmd.set("#ProgressBox.Visible", processor);
         cmd.set("#BurnBox.Visible", def.kind() == MachineDefinition.Kind.HEAT_GENERATOR);
         cmd.set("#SunBox.Visible", def.kind() == MachineDefinition.Kind.SOLAR_GENERATOR);
-        cmd.set("#EnergyBox.Visible", !cube);
+        cmd.set("#EnergyBox.Visible", !cube && def.energyCapacity() > 0);
         cmd.set("#EnergyBigBox.Visible", cube);
         cmd.set("#SecondaryBox.Visible", def.usesSecondary());
         cmd.set("#ExtraLabel.Text", extraLabel(def));
+        for (int i = 0; i < MAX_TANKS; i++) {
+            boolean shown = i < def.tanks().size();
+            boolean chemical = shown && def.tanks().get(i).kind() == ResourceKind.CHEMICAL;
+            cmd.set("#Tank" + i + "Box.Visible", shown);
+            cmd.set("#Tank" + i + "FluidFrame.Visible", shown && !chemical);
+            cmd.set("#Tank" + i + "ChemicalFrame.Visible", chemical);
+        }
 
         for (Grid grid : Grid.VALUES) {
             if (grid.role != null && !has(def, grid.role)) {
@@ -180,6 +190,12 @@ public class MachinePage extends InteractiveCustomUIPage<MachinePage.PageEvent> 
             case ENERGY_CUBE -> {
             }
         }
+        for (int i = 0; i < def.tanks().size() && i < MAX_TANKS && i < state.tanks.length; i++) {
+            ResourceBuffer tank = state.tanks[i];
+            String bar = def.tanks().get(i).kind() == ResourceKind.CHEMICAL ? "Chemical" : "Fluid";
+            cmd.set("#Tank" + i + bar + "Bar.Value", tank.getFillRatio());
+            cmd.set("#Tank" + i + "Text.Text", UiFormat.typeName(tank.getType()) + "  " + UiFormat.amount(tank.getAmount(), tank.getCapacity()));
+        }
         if (def.usesSecondary()) {
             String type = state.secondaryType != null ? state.secondaryType : def.secondaryType() != null ? def.secondaryType() : "empty";
             cmd.set("#SecondaryBar.Value", def.secondaryCapacity() > 0 ? Math.min(1f, (float) state.secondaryStored / def.secondaryCapacity()) : 0f);
@@ -198,6 +214,11 @@ public class MachinePage extends InteractiveCustomUIPage<MachinePage.PageEvent> 
         h = h * 31 + (s.secondaryType == null ? 0 : s.secondaryType.hashCode());
         h = h * 31 + s.burnTicks;
         h = h * 31 + s.burnTotal;
+        for (ResourceBuffer tank : s.tanks) {
+            h = h * 31 + tank.getAmount();
+            h = h * 31 + tank.getCapacity();
+            h = h * 31 + (tank.getType() == null ? 0 : tank.getType().hashCode());
+        }
         return h * 31 + (s.active ? 1 : 0);
     }
 

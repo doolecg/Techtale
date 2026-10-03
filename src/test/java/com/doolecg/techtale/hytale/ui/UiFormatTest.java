@@ -20,6 +20,20 @@ class UiFormatTest {
     }
 
     @Test
+    void amount() {
+        assertEquals("0 / 4000 mB", UiFormat.amount(0, 4000));
+        assertEquals("500 / 16000 mB", UiFormat.amount(500, 16000));
+    }
+
+    @Test
+    void typeName() {
+        assertEquals("Water", UiFormat.typeName("water"));
+        assertEquals("Liquid Water", UiFormat.typeName("liquid_water"));
+        assertEquals("Empty", UiFormat.typeName(null));
+        assertEquals("Empty", UiFormat.typeName(""));
+    }
+
+    @Test
     void seconds() {
         assertEquals("0.0 s", UiFormat.seconds(0));
         assertEquals("4.5 s", UiFormat.seconds(90));

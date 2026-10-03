@@ -1,6 +1,9 @@
 package com.doolecg.techtale.core.machine;
 
+import static com.doolecg.techtale.core.machine.MachineDefinition.Kind.CHEMICAL_PROCESSOR;
 import static com.doolecg.techtale.core.machine.MachineDefinition.Kind.ENERGY_CUBE;
+import static com.doolecg.techtale.core.machine.MachineDefinition.Kind.PUMP;
+import static com.doolecg.techtale.core.machine.MachineDefinition.Kind.TANK;
 import static com.doolecg.techtale.core.machine.MachineDefinition.Kind.HEAT_GENERATOR;
 import static com.doolecg.techtale.core.machine.MachineDefinition.Kind.PROCESSOR;
 import static com.doolecg.techtale.core.machine.MachineDefinition.Kind.SOLAR_GENERATOR;
@@ -11,10 +14,14 @@ import static com.doolecg.techtale.core.machine.MachineDefinition.SlotRole.OUTPU
 import static com.doolecg.techtale.core.machine.MachineDefinition.SlotRole.UPGRADE;
 
 import com.doolecg.techtale.core.recipe.RecipeType;
+import com.doolecg.techtale.core.resource.RelativeSide;
+import com.doolecg.techtale.core.resource.ResourceKind;
+import com.doolecg.techtale.core.resource.TankSpec;
 import java.util.Collection;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 import javax.annotation.Nullable;
 
 /** Every machine type, keyed by block id. Numbers follow Mekanism's defaults (per 1/20 s tick). */
@@ -46,6 +53,27 @@ public final class Machines {
     public static final MachineDefinition ADVANCED_ENERGY_CUBE = cube("Techtale_Energy_Cube_Advanced", 16_000_000L, 16_000);
     public static final MachineDefinition ELITE_ENERGY_CUBE = cube("Techtale_Energy_Cube_Elite", 64_000_000L, 64_000);
     public static final MachineDefinition ULTIMATE_ENERGY_CUBE = cube("Techtale_Energy_Cube_Ultimate", 256_000_000L, 256_000);
+
+    private static final Set<RelativeSide> ALL_SIDES = Set.of(RelativeSide.values());
+    private static final Set<RelativeSide> NOT_BOTTOM = Set.of(
+        RelativeSide.TOP, RelativeSide.FRONT, RelativeSide.BACK, RelativeSide.LEFT, RelativeSide.RIGHT);
+
+    public static final MachineDefinition FLUID_TANK = register(new MachineDefinition(
+        "Techtale_Fluid_Tank", TANK, null, 0, 0, 0, 0, 0, null, List.of(),
+        List.of(new TankSpec(ResourceKind.FLUID, 14_000, NOT_BOTTOM, Set.of(RelativeSide.BOTTOM), null)), null));
+    public static final MachineDefinition CHEMICAL_TANK = register(new MachineDefinition(
+        "Techtale_Chemical_Tank", TANK, null, 0, 0, 0, 0, 0, null, List.of(),
+        List.of(new TankSpec(ResourceKind.CHEMICAL, 64_000, NOT_BOTTOM, Set.of(RelativeSide.BOTTOM), null)), null));
+    public static final MachineDefinition ELECTRIC_PUMP = register(new MachineDefinition(
+        "Techtale_Electric_Pump", PUMP, null, 60, 20, 20_000, 0, 0, null, List.of(),
+        List.of(new TankSpec(ResourceKind.FLUID, 10_000, Set.of(), NOT_BOTTOM, null)), null));
+    public static final MachineDefinition ELECTROLYTIC_SEPARATOR = register(new MachineDefinition(
+        "Techtale_Electrolytic_Separator", CHEMICAL_PROCESSOR, null, 200, 1, 20_000, 0, 0, null, List.of(),
+        List.of(
+            new TankSpec(ResourceKind.FLUID, 10_000, ALL_SIDES, Set.of(), null),
+            new TankSpec(ResourceKind.CHEMICAL, 2_400, Set.of(), Set.of(RelativeSide.LEFT), "hydrogen"),
+            new TankSpec(ResourceKind.CHEMICAL, 2_400, Set.of(), Set.of(RelativeSide.RIGHT), "oxygen")),
+        "electrolysis"));
 
     private Machines() {
     }

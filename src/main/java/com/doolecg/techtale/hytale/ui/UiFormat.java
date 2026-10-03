@@ -26,6 +26,29 @@ public final class UiFormat {
         return tenths % 10 == 0 ? (tenths / 10) + " " + UNITS[unit] : (tenths / 10) + "." + (tenths % 10) + " " + UNITS[unit];
     }
 
+    /** A tank's contents as {@code 500 / 4000 mB}. */
+    public static String amount(long amount, long capacity) {
+        return amount + " / " + capacity + " mB";
+    }
+
+    /** A resource type id as a title: {@code liquid_water} becomes {@code Liquid Water}; null or empty is {@code Empty}. */
+    public static String typeName(String type) {
+        if (type == null || type.isEmpty()) {
+            return "Empty";
+        }
+        StringBuilder out = new StringBuilder();
+        for (String word : type.split("[_ ]+")) {
+            if (word.isEmpty()) {
+                continue;
+            }
+            if (out.length() > 0) {
+                out.append(' ');
+            }
+            out.append(Character.toUpperCase(word.charAt(0))).append(word.substring(1));
+        }
+        return out.toString();
+    }
+
     /** Logic ticks (20 per second) as seconds with one decimal, e.g. {@code 4.5 s}. */
     public static String seconds(int ticks) {
         long tenths = Math.round(ticks / 2.0);
